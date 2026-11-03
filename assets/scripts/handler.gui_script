@@ -13,9 +13,7 @@ function final(self)
 end
 
 function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	gui.set_text(gui.get_node("candy"), tostring(doors.getCandy()))
 end
 
 function on_message(self, message_id, message, sender)
@@ -24,11 +22,56 @@ function on_message(self, message_id, message, sender)
 	-- Remove this function if not needed
 end
 
+local function visual()
+	if onDoor then
+		gui.set_enabled(gui.get_node("backwardarrow"), true)
+		gui.set_enabled(gui.get_node("leftarrow"), false)
+		gui.set_enabled(gui.get_node("rightarrow"), false)
+		gui.set_enabled(gui.get_node("forwardarrow"), true)
+	else
+		gui.set_enabled(gui.get_node("backwardarrow"), false)
+		gui.set_enabled(gui.get_node("leftarrow"), true)
+		gui.set_enabled(gui.get_node("rightarrow"), true)
+		gui.set_enabled(gui.get_node("forwardarrow"), true)
+	end
+end
+
+local arrowTable = {
+	"leftarrow",
+	"rightarrow",
+	"forwardarrow"
+}
+
 function on_input(self, action_id, action)
 	if onDoor then
-		print("on door")
+		if gui.pick_node(gui.get_node("backwardarrow"), action.x, action.y) then
+			if action_id == hash("touch") and action.pressed then
+				doors.getCandy()
+			end
+		end
+		if gui.pick_node(gui.get_node("backwardarrow"), action.x, action.y) then
+			if action_id == hash("touch") and action.pressed then
+				onDoor = false
+			end
+		end
 	else
-		print("not on door")
+		for i, v in ipairs(arrowTable) do
+			if gui.pick_node(gui.get_node(v), action.x, action.y) then			
+				if action_id == hash("touch") and action.pressed then
+					if v == "leftarrow" then
+						doors.prevDoor()
+					elseif v == "rightarrow" then
+						doors.nextDoor()
+					elseif v == "forwardarrow" then
+						onDoor = true
+					end
+				else
+
+				end
+			else
+
+			end
+		end
 	end
 end
 

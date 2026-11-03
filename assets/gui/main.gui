@@ -1,3 +1,8 @@
+script: "/assets/scripts/handler.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
 nodes {
   position {
     x: 50.0
@@ -53,6 +58,25 @@ nodes {
   id: "backwardarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 960.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 50.0
+    y: 20.0
+  }
+  type: TYPE_TEXT
+  text: "-text-"
+  font: "default"
+  id: "candy"
+  pivot: PIVOT_SE
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

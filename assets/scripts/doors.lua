@@ -3,9 +3,7 @@ local doors = {}
 local number = 1 
 local candy = 0
 
-local doorTable = {
-
-}
+local doorTable = {}
 
 function doors.getDoor()
     return number
@@ -24,7 +22,12 @@ function doors.getDoorInfo()
 end
 
 function doors.increaseCandy()
-    candy = candy + 1
+    if doorTable[number] then
+
+    else
+        doorTable[number] = true
+        candy = candy + 1
+    end
 end
 
 function doors.getCandy()
