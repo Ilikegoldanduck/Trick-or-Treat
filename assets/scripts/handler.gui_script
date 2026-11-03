@@ -1,6 +1,7 @@
 local doors = require("assets.scripts.doors")
 
 local onDoor = false
+local inChat = false
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
@@ -46,10 +47,22 @@ local arrowTable = {
 	"forwardarrow"
 }
 
+local function startChat()
+	inChat = true
+	gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
+	gui.set_enabled(gui.get_node("chat"), true)
+end
+
 function on_input(self, action_id, action)
-	if onDoor then
+	if inChat then
+		if action_id == hash("touch") and action.pressed then
+			inChat = false
+			gui.set_enabled(gui.get_node("chat"), false)
+		end
+	elseif onDoor then
 		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) then
 			if action_id == hash("touch") and action.pressed then
+				startChat()
 				doors.increaseCandy()
 			end
 		end

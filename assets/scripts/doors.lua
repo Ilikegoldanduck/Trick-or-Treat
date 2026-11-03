@@ -5,6 +5,16 @@ local candy = 0
 
 local doorTable = {}
 
+local interactions = {
+    {"He gave you candy, what a nice guy!", 1, false},
+    {"Woah! A second candy! You're so lucky!", 2, false},
+    {"No one's here. But there's candy outside!", 1, false},
+    {"This b- I mean the lights are off! I don't think anyone's home.", 0, false},
+    {"Huh... No candy..? Again..?", 0, false},
+    {"What the f- Yo this is too much decorations", 0, false},
+    {"Well this house has candy :D", 1, false}
+}
+
 function doors.getDoor()
     return number
 end
@@ -20,15 +30,19 @@ function doors.prevDoor()
 end
 
 function doors.getDoorInfo()
-    return doorTable[number]
+    if interactions[number][3] then
+        return "No double dipping!!!"
+    else
+        return interactions[number][1]
+    end
 end
 
 function doors.increaseCandy()
-    if doorTable[number] then
+    if interactions[number][3] then
 
     else
-        doorTable[number] = true
-        candy = candy + 1
+        interactions[number][3] = true
+        candy = candy + interactions[number][2]
     end
 end
 

@@ -112,6 +112,34 @@ nodes {
   id: "chat"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  enabled: false
+}
+nodes {
+  position {
+    x: -470.0
+    y: 90.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 470.0
+    y: 50.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "-text-"
+  font: "default"
+  id: "talkText"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "chat"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
