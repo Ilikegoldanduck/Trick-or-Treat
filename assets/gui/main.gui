@@ -99,5 +99,19 @@ nodes {
   pivot: PIVOT_SE
   inherit_alpha: true
 }
+nodes {
+  position {
+    x: 480.0
+    y: 100.0
+  }
+  size {
+    x: 960.0
+    y: 200.0
+  }
+  type: TYPE_BOX
+  id: "chat"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
