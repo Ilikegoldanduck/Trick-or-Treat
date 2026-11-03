@@ -14,7 +14,9 @@ function doors.nextDoor()
 end
 
 function doors.prevDoor()
-    number = number - 1
+    if number > 1 then
+        number = number - 1
+    end
 end
 
 function doors.getDoorInfo()

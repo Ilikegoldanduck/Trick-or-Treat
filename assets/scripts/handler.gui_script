@@ -14,6 +14,12 @@ end
 
 function update(self, dt)
 	gui.set_text(gui.get_node("candy"), tostring(doors.getCandy()))
+	gui.set_text(gui.get_node("doorThing"), tostring(doors.getDoor()))
+	if doors.getDoor() == 1 then
+		gui.set_visible(gui.get_node("leftarrow"), false)
+	else
+		gui.set_visible(gui.get_node("leftarrow"), true)
+	end
 end
 
 function on_message(self, message_id, message, sender)
@@ -24,15 +30,13 @@ end
 
 local function visual()
 	if onDoor then
-		gui.set_enabled(gui.get_node("backwardarrow"), true)
-		gui.set_enabled(gui.get_node("leftarrow"), false)
-		gui.set_enabled(gui.get_node("rightarrow"), false)
-		gui.set_enabled(gui.get_node("forwardarrow"), true)
+		gui.set_visible(gui.get_node("backwardarrow"), true)
+		gui.set_visible(gui.get_node("leftarrow"), false)
+		gui.set_visible(gui.get_node("rightarrow"), false)
 	else
-		gui.set_enabled(gui.get_node("backwardarrow"), false)
-		gui.set_enabled(gui.get_node("leftarrow"), true)
-		gui.set_enabled(gui.get_node("rightarrow"), true)
-		gui.set_enabled(gui.get_node("forwardarrow"), true)
+		gui.set_visible(gui.get_node("backwardarrow"), false)
+		gui.set_visible(gui.get_node("leftarrow"), true)
+		gui.set_visible(gui.get_node("rightarrow"), true)
 	end
 end
 
@@ -44,14 +48,15 @@ local arrowTable = {
 
 function on_input(self, action_id, action)
 	if onDoor then
-		if gui.pick_node(gui.get_node("backwardarrow"), action.x, action.y) then
+		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) then
 			if action_id == hash("touch") and action.pressed then
-				doors.getCandy()
+				doors.increaseCandy()
 			end
 		end
 		if gui.pick_node(gui.get_node("backwardarrow"), action.x, action.y) then
 			if action_id == hash("touch") and action.pressed then
 				onDoor = false
+				visual()
 			end
 		end
 	else
@@ -64,6 +69,7 @@ function on_input(self, action_id, action)
 						doors.nextDoor()
 					elseif v == "forwardarrow" then
 						onDoor = true
+						visual()
 					end
 				else
 
