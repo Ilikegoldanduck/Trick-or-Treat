@@ -1,7 +1,8 @@
+local collectionTable = {}
+
 function init(self)
-	collectionfactory.load("/minigame collection#doors", function(self, url, result)
-		collectionfactory.create("/minigame collection#doors", vmath.vector3(0, 0, 0), nil, nil, 1)
-	end)
+	msg.post(".", "acquire_input_focus")
+	msg.post("#doors", "load")
 end
 
 function final(self)
@@ -32,6 +33,10 @@ function fixed_update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
+	if message_id == hash("proxy_loaded") then
+		msg.post(sender, "enable")
+	elseif message_id == hash("proxy_unloaded") then
+	end
 	if message_id == hash("trick") then
 		collectionfactory.unload("/minigame collection#doors")
 		collectionfactory.load("/minigame collection#" .. message[1], function(self, url, result)

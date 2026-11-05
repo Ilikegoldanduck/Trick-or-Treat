@@ -39,7 +39,7 @@ end
 
 function doors.increaseCandy()
     if interactions[number][3] then
-
+        return 0
     else
         interactions[number][3] = true
         if type(interactions[number][2]) == "number" then
