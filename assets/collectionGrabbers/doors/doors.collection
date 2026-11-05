@@ -1,6 +1,14 @@
 name: "doors"
 scale_along_z: 0
 embedded_instances {
+  id: "go1"
+  data: "components {\n"
+  "  id: \"doors\"\n"
+  "  component: \"/assets/collectionGrabbers/doors/doors.gui\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
   id: "go"
   data: "components {\n"
   "  id: \"doors\"\n"
@@ -11,6 +19,10 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"default_animation: \\\"doorClosed\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "size {\\n"
+  "  x: 960.0\\n"
+  "  y: 640.0\\n"
+  "}\\n"
   "textures {\\n"
   "  sampler: \\\"texture_sampler\\\"\\n"
   "  texture: \\\"/assets/imagebin/doors.atlas\\\"\\n"
@@ -22,12 +34,4 @@ embedded_instances {
     x: 480.0
     y: 320.0
   }
-}
-embedded_instances {
-  id: "go1"
-  data: "components {\n"
-  "  id: \"doors\"\n"
-  "  component: \"/assets/collectionGrabbers/doors/doors.gui\"\n"
-  "}\n"
-  ""
 }
