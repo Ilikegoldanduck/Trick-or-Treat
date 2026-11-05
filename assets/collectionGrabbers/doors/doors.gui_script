@@ -21,6 +21,11 @@ function update(self, dt)
 	else
 		gui.set_visible(gui.get_node("leftarrow"), true)
 	end
+	if doors.getDoorAvail() then
+		gui.set_visible(gui.get_node("forwardarrow"), false)
+	else
+		gui.set_visible(gui.get_node("forwardarrow"), true)
+	end
 end
 
 function on_message(self, message_id, message, sender)
@@ -55,7 +60,7 @@ local function startChat()
 		gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
 		gui.set_enabled(gui.get_node("chat"), true)
 	else
-		msg.post("/minigame collection#main", "trick", {treat})
+		msg.post("go#doors", "trick", {treat})
 	end
 end
 

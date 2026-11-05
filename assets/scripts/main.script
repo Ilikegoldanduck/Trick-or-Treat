@@ -38,10 +38,8 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("proxy_unloaded") then
 	end
 	if message_id == hash("trick") then
-		collectionfactory.unload("/minigame collection#doors")
-		collectionfactory.load("/minigame collection#" .. message[1], function(self, url, result)
-			collectionfactory.create("/minigame collection#" .. message[1], vmath.vector3(0, 0, 0), nil, nil, 1)
-		end)
+		msg.post("#doors", "unload")
+		msg.post("#" .. message[1], "load")
 	end
 end
 

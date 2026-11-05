@@ -30,11 +30,11 @@ function doors.prevDoor()
 end
 
 function doors.getDoorInfo()
-    if interactions[number][3] then
-        return "No double dipping!!!"
-    else
-        return interactions[number][1]
-    end
+    return interactions[number][1]
+end
+
+function doors.getDoorAvail()
+    return interactions[number][3]
 end
 
 function doors.increaseCandy()
