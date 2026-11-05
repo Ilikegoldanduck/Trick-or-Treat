@@ -18,7 +18,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("transition") then
-		gui.animate(gui.get_node("transition"), "scale", vmath.vector3(2, 2, 1), gui.EASING_LINEAR, 1, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+		gui.animate(gui.get_node("transition"), "scale", vmath.vector3(2, 2, 1), gui.EASING_LINEAR, 2, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
 	end
 end
 

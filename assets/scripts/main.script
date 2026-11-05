@@ -41,7 +41,7 @@ function on_message(self, message_id, message, sender)
 	end
 	if message_id == hash("trick") then
 		msg.post("/gui#main", "transition")
-		timer.delay(.5, false, function()
+		timer.delay(1, false, function()
 			msg.post("#" .. currCollect, "unload")
 			msg.post("#" .. message[1], "load")
 			currCollect = message[1]
