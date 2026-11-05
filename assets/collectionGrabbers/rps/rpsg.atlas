@@ -1,0 +1,13 @@
+images {
+  image: "/assets/collectionGrabbers/rps/gun.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rps/paper.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rps/rock.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rps/scissors.png"
+}
+extrude_borders: 2

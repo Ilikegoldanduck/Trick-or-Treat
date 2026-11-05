@@ -1,14 +1,15 @@
 script: "/assets/collectionGrabbers/rps/rps.gui_script"
+textures {
+  name: "rpsg"
+  texture: "/assets/collectionGrabbers/rps/rpsg.atlas"
+}
 nodes {
   position {
     x: 190.0
     y: 150.0
   }
-  size {
-    x: 200.0
-    y: 200.0
-  }
   type: TYPE_BOX
+  texture: "rpsg/paper"
   id: "paper"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -18,11 +19,8 @@ nodes {
     x: 480.0
     y: 150.0
   }
-  size {
-    x: 200.0
-    y: 200.0
-  }
   type: TYPE_BOX
+  texture: "rpsg/rock"
   id: "rock"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -32,13 +30,26 @@ nodes {
     x: 770.0
     y: 150.0
   }
-  size {
-    x: 200.0
-    y: 200.0
-  }
   type: TYPE_BOX
+  texture: "rpsg/scissors"
   id: "scissors"
   inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 400.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  type: TYPE_BOX
+  texture: "rpsg/gun"
+  id: "gun"
+  inherit_alpha: true
+  alpha: 0.0
   size_mode: SIZE_MODE_AUTO
 }
 material: "/builtins/materials/gui.material"
