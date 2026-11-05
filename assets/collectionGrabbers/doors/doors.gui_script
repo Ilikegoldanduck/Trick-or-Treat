@@ -50,8 +50,13 @@ local arrowTable = {
 local function startChat()
 	inChat = true
 	msg.post("go#doors", "open")
-	gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
-	gui.set_enabled(gui.get_node("chat"), true)
+	local treat = doors.increaseCandy()
+	if type(treat) == "number" then
+		gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
+		gui.set_enabled(gui.get_node("chat"), true)
+	else
+		msg.post("/camera#main", "trick", treat)
+	end
 end
 
 function on_input(self, action_id, action)
@@ -65,7 +70,6 @@ function on_input(self, action_id, action)
 		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) then
 			if action_id == hash("touch") and action.pressed then
 				startChat()
-				doors.increaseCandy()
 			end
 		end
 		if gui.pick_node(gui.get_node("backwardarrow"), action.x, action.y) then

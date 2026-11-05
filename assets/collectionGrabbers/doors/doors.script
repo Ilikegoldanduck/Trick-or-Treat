@@ -34,6 +34,8 @@ function on_message(self, message_id, message, sender)
 		msg.post("#sprite", "play_animation", {id = hash("doorOpen")})
 	elseif message_id == hash("close") then
 		msg.post("#sprite", "play_animation", {id = hash("doorClosed")})
+	elseif message_id == hash("trick") then
+		msg.post("/camera#main", "trick", message)
 	end
 end
 

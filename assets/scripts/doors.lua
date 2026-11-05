@@ -8,7 +8,7 @@ local doorTable = {}
 local interactions = {
     {"He gave you candy, what a nice guy!", 1, false},
     {"Woah! A second candy! You're so lucky!", 2, false},
-    {"No one's here. But there's candy outside!", 1, false},
+    {"Huh... He just challenged you to a game of ZGS(Zombie Ghoul Skeleton)!", "rps", false},
     {"This b- I mean the lights are off! I don't think anyone's home.", 0, false},
     {"Huh... No candy..? Again..?", 0, false},
     {"What the f- Yo this is too much decorations", 0, false},
@@ -42,7 +42,13 @@ function doors.increaseCandy()
 
     else
         interactions[number][3] = true
-        candy = candy + interactions[number][2]
+        if type(candy) == "number" then
+            candy = candy + interactions[number][2]
+            return interactions[number][2]
+        else
+            return interactions[number][2]
+        end
+        
     end
 end
 
