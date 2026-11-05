@@ -49,7 +49,7 @@ local arrowTable = {
 
 local function startChat()
 	inChat = true
-	msg.post("/go#doors", "open")
+	msg.post("go#doors", "open")
 	gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
 	gui.set_enabled(gui.get_node("chat"), true)
 end
@@ -59,7 +59,7 @@ function on_input(self, action_id, action)
 		if action_id == hash("touch") and action.pressed then
 			inChat = false
 			gui.set_enabled(gui.get_node("chat"), false)
-			msg.post("/go#doors", "close")
+			msg.post("go#doors", "close")
 		end
 	elseif onDoor then
 		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) then
