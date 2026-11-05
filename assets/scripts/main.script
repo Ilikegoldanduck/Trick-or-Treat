@@ -1,8 +1,9 @@
-local collectionTable = {}
+local currCollect = ""
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post("#doors", "load")
+	currCollect = "doors"
 end
 
 function final(self)
@@ -36,10 +37,15 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("proxy_loaded") then
 		msg.post(sender, "enable")
 	elseif message_id == hash("proxy_unloaded") then
+
 	end
 	if message_id == hash("trick") then
-		msg.post("#doors", "unload")
-		msg.post("#" .. message[1], "load")
+		msg.post("/gui#main", "transition")
+		timer.delay(.5, false, function()
+			msg.post("#" .. currCollect, "unload")
+			msg.post("#" .. message[1], "load")
+			currCollect = message[1]
+		end)
 	end
 end
 

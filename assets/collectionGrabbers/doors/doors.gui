@@ -13,14 +13,17 @@ nodes {
     y: 320.0
   }
   scale {
-    x: -2.0
+    x: 2.0
     y: 2.0
+  }
+  size {
+    x: -50.0
+    y: 50.0
   }
   type: TYPE_BOX
   texture: "arrows/turnArrow"
   id: "leftarrow"
   inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
@@ -59,13 +62,16 @@ nodes {
   }
   scale {
     x: 2.0
-    y: -2.0
+    y: 2.0
+  }
+  size {
+    x: 50.0
+    y: -50.0
   }
   type: TYPE_BOX
   texture: "arrows/straightArrow"
   id: "backwardarrow"
   inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
   visible: false
 }
 nodes {

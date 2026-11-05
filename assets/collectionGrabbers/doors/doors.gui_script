@@ -96,10 +96,10 @@ function on_input(self, action_id, action)
 						visual()
 					end
 				else
-
+					gui.set(gui.get_node(v), "scale", vmath.vector3(2.2, 2.2, 1))
 				end
 			else
-
+				gui.set(gui.get_node(v), "scale", vmath.vector3(2, 2, 1))
 			end
 		end
 	end
