@@ -1,0 +1,47 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Learn more: https://defold.com/manuals/message-passing/
+	-- Remove this function if not needed
+end
+
+local inputs = {
+	"rock",
+	"paper",
+	"scissors"
+}
+
+function on_input(self, action_id, action)
+	for i, v in ipairs(inputs) do
+		if gui.pick_node(gui.get_node(v), action.x, action.y) and action.pressed then
+			if action_id == hash(v) and action.pressed then
+				msg.post("rps", "play", {choice = v})
+			else
+				gui.set(gui.get_node(v), "scale", vmath.vector3(1.2, 1.2, 1.2))
+			end
+		else
+			gui.set(gui.get_node(v), "scale", vmath.vector3(1, 1, 1))	
+		end
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end
