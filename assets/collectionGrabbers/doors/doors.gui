@@ -1,32 +1,38 @@
-script: "/assets/scripts/handler.gui_script"
+script: "/assets/collectionGrabbers/doors/doors.gui_script"
 fonts {
   name: "default"
   font: "/builtins/fonts/default.font"
 }
+textures {
+  name: "arrows"
+  texture: "/assets/imagebin/arrows.atlas"
+}
 nodes {
   position {
-    x: 50.0
+    x: 65.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: -2.0
+    y: 2.0
   }
   type: TYPE_BOX
+  texture: "arrows/turnArrow"
   id: "leftarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
-    x: 910.0
+    x: 885.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 2.0
+    y: 2.0
   }
   type: TYPE_BOX
+  texture: "arrows/turnArrow"
   id: "rightarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -34,13 +40,14 @@ nodes {
 nodes {
   position {
     x: 480.0
-    y: 320.0
+    y: 200.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 2.0
+    y: 2.0
   }
   type: TYPE_BOX
+  texture: "arrows/straightArrow"
   id: "forwardarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -48,13 +55,14 @@ nodes {
 nodes {
   position {
     x: 480.0
-    y: 50.0
+    y: 65.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 2.0
+    y: -2.0
   }
   type: TYPE_BOX
+  texture: "arrows/straightArrow"
   id: "backwardarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -71,6 +79,11 @@ nodes {
   size {
     x: 50.0
     y: 20.0
+  }
+  color {
+    x: 0.0
+    y: 0.2
+    z: 0.0
   }
   type: TYPE_TEXT
   text: "-text-"
@@ -91,6 +104,11 @@ nodes {
   size {
     x: 50.0
     y: 20.0
+  }
+  color {
+    x: 0.0
+    y: 0.2
+    z: 0.0
   }
   type: TYPE_TEXT
   text: "-text-"

@@ -1,7 +1,7 @@
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	collectionfactory.load("/minigame collection#doors", function(self, url, result)
+		collectionfactory.create("/minigame collection#doors", vmath.vector3(0, 0, 0), nil, nil, 1)
+	end)
 end
 
 function final(self)

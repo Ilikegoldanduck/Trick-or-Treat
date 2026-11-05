@@ -1,4 +1,4 @@
-script: "/assets/scripts/rps.gui_script"
+script: "/assets/collectionGrabbers/rps/rps.gui_script"
 nodes {
   position {
     x: 190.0

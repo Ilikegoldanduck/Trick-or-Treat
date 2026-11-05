@@ -4,16 +4,36 @@ embedded_instances {
   id: "camera"
   data: "components {\n"
   "  id: \"main\"\n"
-  "  component: \"/assets/gui/main.gui\"\n"
+  "  component: \"/assets/scripts/main.script\"\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"camera\"\n"
   "  type: \"camera\"\n"
   "  data: \"aspect_ratio: 1.0\\n"
   "fov: 0.7854\\n"
-  "near_z: 0.1\\n"
+  "near_z: -1.0\\n"
   "far_z: 1000.0\\n"
   "orthographic_projection: 1\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 480.0
+    y: 320.0
+  }
+}
+embedded_instances {
+  id: "minigame collection"
+  data: "embedded_components {\n"
+  "  id: \"rps\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/assets/collectionGrabbers/rps/rps.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"doors\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/assets/collectionGrabbers/doors/doors.collection\\\"\\n"
   "\"\n"
   "}\n"
   ""

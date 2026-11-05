@@ -1,0 +1,7 @@
+images {
+  image: "/assets/imagebin/straightArrow.png"
+}
+images {
+  image: "/assets/imagebin/turnArrow.png"
+}
+extrude_borders: 2
