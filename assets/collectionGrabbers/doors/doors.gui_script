@@ -13,7 +13,7 @@ function final(self)
 	-- Remove this function if not needed
 end
 
-function update(self, dt)
+function check()
 	gui.set_text(gui.get_node("candy"), tostring(doors.getCandy()))
 	gui.set_text(gui.get_node("doorThing"), tostring(doors.getDoor()))
 	if doors.getDoor() == 1 then
@@ -28,6 +28,10 @@ function update(self, dt)
 		gui.set_enabled(gui.get_node("forwardarrow"), true)
 		gui.set_enabled(gui.get_node("rightarrow"), false)
 	end
+end
+
+function update(self, dt)
+	check()
 end
 
 function on_message(self, message_id, message, sender)
@@ -54,21 +58,24 @@ local arrowTable = {
 	"forwardarrow"
 }
 
+local treat
+
 local function startChat()
 	inChat = true
 	msg.post("go#doors", "open")
-	local treat = doors.increaseCandy()
-	if type(treat) == "number" then
-		gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
-		gui.set_enabled(gui.get_node("chat"), true)
-	else
-		msg.post("go#doors", "trick", {treat})
-	end
+	treat = doors.increaseCandy()
+	gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
+	gui.set_enabled(gui.get_node("chat"), true)
 end
 
 function on_input(self, action_id, action)
 	if inChat then
 		if action_id == hash("touch") and action.pressed then
+			if type(treat) == "number" then
+
+			else
+				msg.post("go#doors", "trick", {treat})
+			end
 			inChat = false
 			gui.set_enabled(gui.get_node("chat"), false)
 			msg.post("go#doors", "close")
@@ -91,12 +98,13 @@ function on_input(self, action_id, action)
 				if action_id == hash("touch") and action.pressed then
 					if v == "leftarrow" then
 						doors.prevDoor()
-					elseif v == "rightarrow" then
+					elseif v == "rightarrow" and doors.getDoorAvail() then
 						doors.nextDoor()
 					elseif v == "forwardarrow" then
 						onDoor = true
 						visual()
 					end
+					check()
 				else
 					gui.set(gui.get_node(v), "scale", vmath.vector3(2.2, 2.2, 1))
 				end
