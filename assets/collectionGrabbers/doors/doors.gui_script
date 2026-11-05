@@ -55,7 +55,7 @@ local function startChat()
 		gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
 		gui.set_enabled(gui.get_node("chat"), true)
 	else
-		msg.post("/camera#main", "trick", treat)
+		msg.post("/camera#main", "trick", {treat})
 	end
 end
 
