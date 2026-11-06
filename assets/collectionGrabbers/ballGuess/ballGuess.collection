@@ -1,0 +1,10 @@
+name: "ballGuess"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"ballGuess\"\n"
+  "  component: \"/assets/collectionGrabbers/ballGuess/ballGuess.gui\"\n"
+  "}\n"
+  ""
+}
