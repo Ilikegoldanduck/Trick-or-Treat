@@ -1,3 +1,4 @@
+script: "/assets/collectionGrabbers/ballGuess/ballGuess.gui_script"
 nodes {
   position {
     x: 280.0
@@ -37,6 +38,20 @@ nodes {
   }
   type: TYPE_BOX
   id: "cup2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 200.0
+  }
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  type: TYPE_PIE
+  id: "ball"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }

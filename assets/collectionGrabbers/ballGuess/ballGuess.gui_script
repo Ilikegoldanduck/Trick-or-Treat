@@ -2,6 +2,7 @@ function init(self)
 	gui.animate(gui.get_node("cup1"), "position", vmath.vector3(280, 300, 0), gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
 	gui.animate(gui.get_node("cup2"), "position", vmath.vector3(480, 300, 0), gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
 	gui.animate(gui.get_node("cup3"), "position", vmath.vector3(680, 300, 0), gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+	gui.set_visible(gui.get_node("ball"), false)
 	timer.delay(3, false, function()
 		spin()
 		timer.delay(.5, false, function()
@@ -39,6 +40,17 @@ function on_message(self, message_id, message, sender)
 		if gui.pick_node(gui.get_node(v), message.x, message.y) then
 			if message_id == hash("touch") and message.pressed then
 				msg.post(".", "release_input_focus")
+				if i == 1 then
+					gui.set(gui.get_node("ball"), "position", vmath.vector3(280, 200, 0))
+				elseif i == 2 then
+					gui.set(gui.get_node("ball"), "position", vmath.vector3(480, 200, 0))
+				else
+					gui.set(gui.get_node("ball"), "position", vmath.vector3(680, 200, 0))
+				end
+				gui.set_visible(gui.get_node("ball"), true)
+				gui.animate(gui.get_node("cup1"), "position", vmath.vector3(280, 300, 0), gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+				gui.animate(gui.get_node("cup2"), "position", vmath.vector3(480, 300, 0), gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+				gui.animate(gui.get_node("cup3"), "position", vmath.vector3(680, 300, 0), gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
 				msg.post("main:/minigame collection#main", "trick", {"doors"})
 			else
 				gui.set(gui.get_node(v), "scale", vmath.vector3(1.2, 1.2, 1))
