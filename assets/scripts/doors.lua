@@ -12,7 +12,10 @@ local interactions = {
     {"The lights are off! I don't think anyone's home.", 0, false},
     {"This guy just threw all the candy on the ground what D:", {"clickclick", 5}, false},
     {"Well this house has candy :D", 1, false},
-    {"He wanted to play a game of... guess the ball...?", {"ballGuess", 0}, false}
+    {"He wanted to play a game of... guess the ball...?", {"ballGuess", 0}, false},
+    {"Wow, more candy :3", 1, false},
+    {"What D: He just stole my candy..", -1, false},
+    {"oooo he just scrambled your memory...", {"memoryMatch", 1}, false}
 }
 
 function doors.getDoor()
