@@ -1,0 +1,46 @@
+local clickerTable = {}
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
+	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
+	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
+	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
+	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
+	gui.set_position(clickerTable[0], vmath.vector3(200, 100, 0))
+	gui.set_position(clickerTable[0], vmath.vector3(200, 540, 0))
+	gui.set_position(clickerTable[0], vmath.vector3(480, 320, 0))
+	gui.set_position(clickerTable[0], vmath.vector3(760, 100, 0))
+	gui.set_position(clickerTable[0], vmath.vector3(760, 540, 0))
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	for i, v in ipairs(clickerTable) do
+		if gui.pick_node(v, action.x, action.y) and action_id == hash("touch") and action.pressed then
+			gui.set_enabled(v, false)
+			table.remove(clickerTable, i)
+			if #clickerTable == 0 then
+				msg.post(".", "release_input_focus")
+				msg.post("go#doors", "trick", {"doors"})
+			end
+		end
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

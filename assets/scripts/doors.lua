@@ -9,8 +9,8 @@ local interactions = {
     {"He gave you candy, what a nice guy!", 1, false},
     {"Woah! A second candy! You're so lucky!", 2, false},
     {"Huh... He just challenged you to a game of Rock Paper Scissors!", "rps", false},
-    {"This b- I mean the lights are off! I don't think anyone's home.", 0, false},
-    {"Huh... No candy..? Again..?", 0, false},
+    {"The lights are off! I don't think anyone's home.", 0, false},
+    {"This guy just threw all the candy on the ground what D:", "clickclick", false},
     {"What the f- Yo this is too much decorations", 0, false},
     {"Well this house has candy :D", 1, false}
 }

@@ -1,0 +1,10 @@
+name: "clickclick"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"clickclick\"\n"
+  "  component: \"/assets/collectionGrabbers/clickclick/clickclick.gui\"\n"
+  "}\n"
+  ""
+}
