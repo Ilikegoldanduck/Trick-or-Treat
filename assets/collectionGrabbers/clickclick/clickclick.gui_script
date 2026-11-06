@@ -2,16 +2,16 @@ local clickerTable = {}
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
-	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
-	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
-	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
-	table.insert(clickerTable, gui.clone(gui.get_node("clicker")))
-	gui.set_position(clickerTable[0], vmath.vector3(200, 100, 0))
-	gui.set_position(clickerTable[0], vmath.vector3(200, 540, 0))
-	gui.set_position(clickerTable[0], vmath.vector3(480, 320, 0))
-	gui.set_position(clickerTable[0], vmath.vector3(760, 100, 0))
-	gui.set_position(clickerTable[0], vmath.vector3(760, 540, 0))
+	for i = 0, 4, 1 do
+		local clicker = gui.clone(gui.get_node("clicker"))
+		pprint(clicker)
+		table.insert(clickerTable, clicker)
+	end
+	gui.set(clickerTable[1], "position", vmath.vector3(200, 100, 0))
+	gui.set(clickerTable[2], "position", vmath.vector3(200, 540, 0))
+	gui.set(clickerTable[3], "position", vmath.vector3(480, 320, 0))
+	gui.set(clickerTable[4], "position", vmath.vector3(760, 100, 0))
+	gui.set(clickerTable[5], "position", vmath.vector3(760, 540, 0))
 end
 
 function final(self)
@@ -33,7 +33,7 @@ function on_input(self, action_id, action)
 			table.remove(clickerTable, i)
 			if #clickerTable == 0 then
 				msg.post(".", "release_input_focus")
-				msg.post("go#doors", "trick", {"doors"})
+				msg.post("main:/minigame collection#main", "trick", {"doors"})
 			end
 		end
 	end
