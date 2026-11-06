@@ -81,16 +81,25 @@ function on_input(self, action_id, action)
 			msg.post("go#doors", "close")
 		end
 	elseif onDoor then
-		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) then
+		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) and not doors.getDoorAvail() then
 			if action_id == hash("touch") and action.pressed then
 				startChat()
+			else
+				gui.set(gui.get_node("forwardarrow"), "scale", vmath.vector3(2.2, 2.2, 1))
+
 			end
+		else
+			gui.set(gui.get_node("forwardarrow"), "scale", vmath.vector3(2, 2, 1))
 		end
 		if gui.pick_node(gui.get_node("backwardarrow"), action.x, action.y) then
 			if action_id == hash("touch") and action.pressed then
 				onDoor = false
 				visual()
+			else
+				gui.set(gui.get_node("backwardarrow"), "scale", vmath.vector3(2.2, 2.2, 1))
 			end
+		else
+			gui.set(gui.get_node("backwardarrow"), "scale", vmath.vector3(2, 2, 1))
 		end
 	else
 		for i, v in ipairs(arrowTable) do
