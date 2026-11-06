@@ -100,7 +100,7 @@ function on_input(self, action_id, action)
 						doors.prevDoor()
 					elseif v == "rightarrow" and doors.getDoorAvail() then
 						doors.nextDoor()
-					elseif v == "forwardarrow" and doors.getDoorAvail() then
+					elseif v == "forwardarrow" and not doors.getDoorAvail() then
 						onDoor = true
 						visual()
 					end
