@@ -1,1 +1,3 @@
 sound: "/assets/soundbin/hit.wav"
+gain: 0.5
+speed: 2.0

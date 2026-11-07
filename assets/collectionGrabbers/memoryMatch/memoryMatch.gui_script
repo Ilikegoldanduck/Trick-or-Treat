@@ -38,6 +38,7 @@ function on_input(self, action_id, action)
 			if gui.pick_node(gui.get_node(v), action.x, action.y) then
 				if action_id == hash("touch") and action.pressed then
 					temptemp = false
+					msg.post("main:/soundHandler#soundHandler", "sound", {"card"})
 					if temp ~= 3 then
 						temp = temp + 1
 						gui.set_text(gui.get_node("text"), "Pick " .. (4 - temp))

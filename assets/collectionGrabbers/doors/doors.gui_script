@@ -54,6 +54,7 @@ local treat
 
 local function startChat()
 	inChat = true
+	msg.post("main:/soundHandler#soundHandler", "sound", {"openDoor"})
 	msg.post("go#doors", "open")
 	treat = doors.increaseCandy()
 	gui.set_text(gui.get_node("talkText"), doors.getDoorInfo())
@@ -71,6 +72,7 @@ function on_input(self, action_id, action)
 			inChat = false
 			gui.set_enabled(gui.get_node("chat"), false)
 			msg.post("go#doors", "close")
+			msg.post("main:/soundHandler#soundHandler", "sound", {"closeDoor"})
 		end
 	elseif onDoor then
 		if gui.pick_node(gui.get_node("forwardarrow"), action.x, action.y) and not doors.getDoorAvail() then

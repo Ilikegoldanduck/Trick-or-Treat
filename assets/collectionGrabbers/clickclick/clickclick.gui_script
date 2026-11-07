@@ -17,6 +17,7 @@ function on_input(self, action_id, action)
 	for i, v in ipairs(clickerTable) do
 		if gui.pick_node(v, action.x, action.y) and action_id == hash("touch") and action.pressed then
 			gui.set_enabled(v, false)
+			msg.post("main:/soundHandler#soundHandler", "sound", {"candy"})
 			table.remove(clickerTable, i)
 			if #clickerTable == 0 then
 				gui.set(gui.get_node("text"), "color.w", 0)

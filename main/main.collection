@@ -121,5 +121,9 @@ embedded_instances {
   "  id: \"closeDoor\"\n"
   "  component: \"/assets/soundbin/closeDoor.sound\"\n"
   "}\n"
+  "components {\n"
+  "  id: \"soundHandler\"\n"
+  "  component: \"/assets/scripts/soundHandler.script\"\n"
+  "}\n"
   ""
 }

@@ -54,7 +54,6 @@ local selectedIndex = nil
 function on_input(self, action_id, action)
 	if (selected == nil) and action_id == hash("touch") and action.pressed then
 		for i, v in ipairs(aidTable) do
-			pprint(v)
 			if gui.pick_node(gui.get_node(v), action.x, action.y) then
 				selected = v
 				selectedIndex = i
@@ -69,6 +68,7 @@ function on_input(self, action_id, action)
 				table.remove(aidTable, selectedIndex)
 				table.remove(eyeTable, i)
 				selectedIndex = 0
+				msg.post("main:/soundHandler#soundHandler", "sound", {"bandaid"})
 				if #aidTable == 0 then
 					msg.post(".", "release_input_focus")
 					for i, v in ipairs(stareTable) do
