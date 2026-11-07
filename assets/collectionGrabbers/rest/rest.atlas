@@ -1,0 +1,37 @@
+images {
+  image: "/assets/collectionGrabbers/rest/candy1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/candy2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/candy3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/cat1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/cat2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/cat3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/fire1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/fire2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/fire3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/man1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/man2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest/man3.png"
+}
+extrude_borders: 2
