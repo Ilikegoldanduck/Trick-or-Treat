@@ -1,4 +1,8 @@
 script: "/assets/collectionGrabbers/memoryFight/memoryFight.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
 nodes {
   position {
     x: 200.0
@@ -16,7 +20,7 @@ nodes {
 nodes {
   position {
     x: 480.0
-    y: 550.0
+    y: 500.0
   }
   size {
     x: 300.0
@@ -31,7 +35,7 @@ nodes {
 nodes {
   position {
     x: 330.0
-    y: 550.0
+    y: 500.0
   }
   size {
     x: 300.0
@@ -42,6 +46,25 @@ nodes {
   pivot: PIVOT_W
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 580.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Click Click Click!!!"
+  font: "default"
+  id: "text"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

@@ -21,7 +21,7 @@ local interactions = {
     {"He gave m- Wait... I feel like I went through this already...", 1, false},
     {"WAIT NO-", {"memoryFight", 1}, false},
     {"Why did he just... you know what nevermind. \nAt least this guy gave me candy :D", 1, false},
-    {"A... coinflip...?\nI mean gambling never hurt nobody righttt", {"coinFlip", -1}, false},
+    {"A... coinflip...?\nI mean gambling never hurt nobody righttt", {"coinFlip", 1}, false},
     {"He gave me candy :D", 1, false}
 }
 
