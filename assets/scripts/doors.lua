@@ -24,7 +24,8 @@ local interactions = {
     {"WAIT NO-", {"memoryFight", 1}, false},
     {"Why did he just... you know what nevermind. \nAt least this guy gave me candy :D", 1, false},
     {"A... coinflip...?\nI mean gambling never hurt nobody righttt", {"coinFlip", 1}, false},
-    {"He gave me candy :D", 1, false}
+    {"He gave me candy :D", 1, false},
+    {"umm.. are you okay..?", {"stare", 1}, false}
 }
 
 function doors.getDoor()
