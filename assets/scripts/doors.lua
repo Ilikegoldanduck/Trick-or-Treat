@@ -15,11 +15,14 @@ local interactions = {
     {"He wanted to play a game of... guess the ball...?", {"ballGuess", 0}, false},
     {"Wow, more candy :3", 1, false},
     {"What D: He just stole my candy..", -1, false},
-    {"oooo he just scrambled your memory...\nDon't touch the mines!", {"memoryMatch", -2}, false},
+    {"Oooo he just grabbed your candy and... put it in his basket..?\nDon't touch the mines! They eat your memory!!!", {"memoryMatch", -2}, false},
     {"He gave me candy :D", 1, false},
     {"He gave me candy :D", 1, false},
     {"He gave m- Wait... I feel like I went through this already...", 1, false},
-    {"WAIT NO-", {"memoryFight", 1}, false}
+    {"WAIT NO-", {"memoryFight", 1}, false},
+    {"Why did he just... you know what nevermind. \nAt least this guy gave me candy :D", 1, false},
+    {"A... coinflip...?\nI mean gambling never hurt nobody righttt", {"coinFlip", -1}, false},
+    {"He gave me candy :D", 1, false}
 }
 
 function doors.getDoor()

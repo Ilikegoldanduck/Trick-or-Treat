@@ -13,5 +13,35 @@ nodes {
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
+nodes {
+  position {
+    x: 480.0
+    y: 550.0
+  }
+  size {
+    x: 300.0
+    y: 75.0
+  }
+  type: TYPE_BOX
+  id: "healthOutline"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 330.0
+    y: 550.0
+  }
+  size {
+    x: 300.0
+    y: 75.0
+  }
+  type: TYPE_BOX
+  id: "healthBar"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
