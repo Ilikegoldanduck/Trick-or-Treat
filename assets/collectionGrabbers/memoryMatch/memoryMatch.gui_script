@@ -31,26 +31,6 @@ function init(self)
 	end
 end
 
-function spin()
-	
-end
-
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function on_message(self, message_id, message, sender)
-	
-end
-
 function on_input(self, action_id, action)
 	if temptemp then
 		for i, v in ipairs(tiles) do
@@ -83,10 +63,4 @@ function on_input(self, action_id, action)
 			end
 		end
 	end
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
 end

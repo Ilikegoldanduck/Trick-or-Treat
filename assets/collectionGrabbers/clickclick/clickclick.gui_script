@@ -14,18 +14,6 @@ function init(self)
 	gui.set(clickerTable[5], "position", vmath.vector3(760, 540, 0))
 end
 
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
 function on_input(self, action_id, action)
 	for i, v in ipairs(clickerTable) do
 		if gui.pick_node(v, action.x, action.y) and action_id == hash("touch") and action.pressed then
@@ -37,10 +25,4 @@ function on_input(self, action_id, action)
 			end
 		end
 	end
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
 end
