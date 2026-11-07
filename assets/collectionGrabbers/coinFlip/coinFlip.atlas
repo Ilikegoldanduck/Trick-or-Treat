@@ -1,0 +1,7 @@
+images {
+  image: "/assets/collectionGrabbers/coinFlip/heads.png"
+}
+images {
+  image: "/assets/collectionGrabbers/coinFlip/tails.png"
+}
+extrude_borders: 2

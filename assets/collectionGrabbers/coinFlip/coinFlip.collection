@@ -1,2 +1,10 @@
 name: "coinFlip"
 scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"coinFlip\"\n"
+  "  component: \"/assets/collectionGrabbers/coinFlip/coinFlip.gui\"\n"
+  "}\n"
+  ""
+}
