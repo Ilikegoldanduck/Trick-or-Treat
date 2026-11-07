@@ -10,17 +10,19 @@ end
 function check()
 	gui.set_text(gui.get_node("candy"), tostring(doors.getCandy()))
 	gui.set_text(gui.get_node("doorThing"), tostring(doors.getDoor()))
+	if doors.getDoorAvail() then
+		gui.set_enabled(gui.get_node("forwardarrow"), false)
+		gui.set_enabled(gui.get_node("rightarrow"), true)
+		gui.set_enabled(gui.get_node("leftarrow"), false)
+	else
+		gui.set_enabled(gui.get_node("forwardarrow"), true)
+		gui.set_enabled(gui.get_node("leftarrow"), true)
+		gui.set_enabled(gui.get_node("rightarrow"), false)
+	end
 	if doors.getDoor() == 1 then
 		gui.set_enabled(gui.get_node("leftarrow"), false)
 	else
 		gui.set_enabled(gui.get_node("leftarrow"), true)
-	end
-	if doors.getDoorAvail() then
-		gui.set_enabled(gui.get_node("forwardarrow"), false)
-		gui.set_enabled(gui.get_node("rightarrow"), true)
-	else
-		gui.set_enabled(gui.get_node("forwardarrow"), true)
-		gui.set_enabled(gui.get_node("rightarrow"), false)
 	end
 end
 
