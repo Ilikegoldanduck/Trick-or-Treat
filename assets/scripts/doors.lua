@@ -1,6 +1,6 @@
 local doors = {}
 
-local number = 7
+local number = 10
 local candy = 0
 
 local doorTable = {}
@@ -15,7 +15,7 @@ local interactions = {
     {"He wanted to play a game of... guess the ball...?", {"ballGuess", 0}, false},
     {"Wow, more candy :3", 1, false},
     {"What D: He just stole my candy..", -1, false},
-    {"oooo he just scrambled your memory...", {"memoryMatch", 1}, false}
+    {"oooo he just scrambled your memory...\nDon't touch the mine!", {"memoryMatch", 1}, false}
 }
 
 function doors.getDoor()

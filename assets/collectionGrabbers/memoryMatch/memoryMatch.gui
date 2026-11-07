@@ -1,50 +1,8 @@
-script: "/assets/collectionGrabbers/ballGuess/ballGuess.gui_script"
+script: "/assets/collectionGrabbers/memoryMatch/memoryMatch.gui_script"
 nodes {
   position {
     x: 280.0
     y: 170.0
-  }
-  size {
-    x: 100.0
-    y: 100.0
-  }
-  type: TYPE_BOX
-  id: "tile1"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 480.0
-    y: 170.0
-  }
-  size {
-    x: 100.0
-    y: 100.0
-  }
-  type: TYPE_BOX
-  id: "tile2"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 680.0
-    y: 170.0
-  }
-  size {
-    x: 100.0
-    y: 100.0
-  }
-  type: TYPE_BOX
-  id: "tile3"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 280.0
-    y: 320.0
   }
   size {
     x: 100.0
@@ -58,6 +16,34 @@ nodes {
 nodes {
   position {
     x: 480.0
+    y: 170.0
+  }
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "tile3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 680.0
+    y: 170.0
+  }
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "tile7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 280.0
     y: 320.0
   }
   size {
@@ -65,7 +51,21 @@ nodes {
     y: 100.0
   }
   type: TYPE_BOX
-  id: "tile5"
+  id: "tile1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 320.0
+  }
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "tile2"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -79,7 +79,7 @@ nodes {
     y: 100.0
   }
   type: TYPE_BOX
-  id: "tile6"
+  id: "tile9"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -93,7 +93,7 @@ nodes {
     y: 100.0
   }
   type: TYPE_BOX
-  id: "tile7"
+  id: "tile6"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -121,7 +121,7 @@ nodes {
     y: 100.0
   }
   type: TYPE_BOX
-  id: "tile9"
+  id: "tile5"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }

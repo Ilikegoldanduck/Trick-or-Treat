@@ -3,8 +3,8 @@ scale_along_z: 0
 embedded_instances {
   id: "go"
   data: "components {\n"
-  "  id: \"ballGuess\"\n"
-  "  component: \"/assets/collectionGrabbers/ballGuess/ballGuess.gui\"\n"
+  "  id: \"memoryMatch\"\n"
+  "  component: \"/assets/collectionGrabbers/memoryMatch/memoryMatch.gui\"\n"
   "}\n"
   ""
 }
