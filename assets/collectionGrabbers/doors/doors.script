@@ -9,5 +9,11 @@ function on_message(self, message_id, message, sender)
 		msg.post("#sprite", "play_animation", {id = hash("doorClosed")})
 	elseif message_id == hash("trick") then
 		msg.post("main:/minigame collection#main", "trick", message)
+	elseif message_id == hash("closeup") then
+		go.set("/go", "scale", vmath.vector3(1.5, 1.5, 1))
+		go.set("/go", "position", vmath.vector3(480, 420, 1))
+	elseif message_id == hash("backup") then
+		go.set("/go", "scale", vmath.vector3(1, 1, 1))
+		go.set("/go", "position", vmath.vector3(480, 320, 1))
 	end
 end

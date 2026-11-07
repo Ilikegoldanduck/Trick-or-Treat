@@ -30,13 +30,17 @@ end
 
 local function visual()
 	if onDoor then
+		msg.post("go#doors", "closeup")
 		gui.set_visible(gui.get_node("backwardarrow"), true)
 		gui.set_visible(gui.get_node("leftarrow"), false)
 		gui.set_visible(gui.get_node("rightarrow"), false)
+		gui.set(gui.get_node("doorThing"), "position", vmath.vector3(250, 390, 0))
 	else
+		msg.post("go#doors", "backup")
 		gui.set_visible(gui.get_node("backwardarrow"), false)
 		gui.set_visible(gui.get_node("leftarrow"), true)
 		gui.set_visible(gui.get_node("rightarrow"), true)
+		gui.set(gui.get_node("doorThing"), "position", vmath.vector3(320, 320, 0))
 	end
 end
 
@@ -74,7 +78,6 @@ function on_input(self, action_id, action)
 				startChat()
 			else
 				gui.set(gui.get_node("forwardarrow"), "scale", vmath.vector3(2.2, 2.2, 1))
-
 			end
 		else
 			gui.set(gui.get_node("forwardarrow"), "scale", vmath.vector3(2, 2, 1))
