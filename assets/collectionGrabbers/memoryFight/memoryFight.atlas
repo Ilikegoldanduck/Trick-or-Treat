@@ -1,1 +1,16 @@
+images {
+  image: "/assets/collectionGrabbers/memoryFight/clickHere!.png"
+}
+images {
+  image: "/assets/collectionGrabbers/memoryFight/ghost1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/memoryFight/ghost2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/memoryFight/ghost3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/memoryFight/ghostHurt.png"
+}
 extrude_borders: 2
