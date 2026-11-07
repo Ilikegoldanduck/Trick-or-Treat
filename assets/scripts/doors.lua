@@ -8,14 +8,18 @@ local doorTable = {}
 local interactions = {
     {"He gave you candy, what a nice guy!", 1, false},
     {"Woah! A second candy! You're so lucky!", 2, false},
-    {"Huh... He just challenged you to a game of Rock Paper Scissors!", {"rps", 0}, false},
+    {"Huh... She just challenged you to a game of Rock Paper Scissors!", {"rps", 0}, false},
     {"The lights are off! I don't think anyone's home.", 0, false},
     {"This guy just threw all the candy on the ground what D:", {"clickclick", 5}, false},
     {"Well this house has candy :D", 1, false},
     {"He wanted to play a game of... guess the ball...?", {"ballGuess", 0}, false},
     {"Wow, more candy :3", 1, false},
     {"What D: He just stole my candy..", -1, false},
-    {"oooo he just scrambled your memory...\nDon't touch the mine!", {"memoryMatch", 1}, false}
+    {"oooo he just scrambled your memory...\nDon't touch the mines!", {"memoryMatch", -2}, false},
+    {"He gave me candy :D", 1, false},
+    {"He gave me candy :D", 1, false},
+    {"He gave m- Wait... I feel like I went through this already...", 1, false},
+    {"WAIT NO-", {"fight", 1}, false}
 }
 
 function doors.getDoor()
