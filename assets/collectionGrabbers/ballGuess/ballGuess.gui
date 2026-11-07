@@ -1,4 +1,8 @@
 script: "/assets/collectionGrabbers/ballGuess/ballGuess.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
 textures {
   name: "ballGuess"
   texture: "/assets/collectionGrabbers/ballGuess/ballGuess.atlas"
@@ -65,6 +69,25 @@ nodes {
   id: "ball"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 600.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Guess where the ball is"
+  font: "default"
+  id: "text"
+  inherit_alpha: true
 }
 layers {
   name: "layer"

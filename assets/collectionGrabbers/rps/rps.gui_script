@@ -10,9 +10,10 @@ local inputs = {
 
 function playGame()
 	for i, v in ipairs(inputs) do
-		gui.set_enabled(gui.get_node(v), false)
+		gui.animate(gui.get_node(v), "color.w", 0, gui.EASING_LINEAR, 1, 0)
 	end
-	timer.delay(1, false, function()
+	gui.animate(gui.get_node("text"), "color.w", 0, gui.EASING_LINEAR, 1, 0)
+	timer.delay(2, false, function()
 		gui.animate(gui.get_node("gun"), "color.w", 1, gui.EASING_LINEAR, 2, 0, function()
 			timer.delay(.5, false, function()
 				msg.post(".", "release_input_focus")

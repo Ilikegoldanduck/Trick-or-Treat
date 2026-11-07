@@ -1,4 +1,8 @@
 script: "/assets/collectionGrabbers/rps/rps.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
 textures {
   name: "rpsg"
   texture: "/assets/collectionGrabbers/rps/rpsg.atlas"
@@ -51,6 +55,26 @@ nodes {
   inherit_alpha: true
   alpha: 0.0
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 600.0
+    z: 1.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  size {
+    x: 100.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Pick one"
+  font: "default"
+  id: "text"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

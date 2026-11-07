@@ -1,9 +1,11 @@
 local doors = {}
 
-local number = 14
+local number = 5
 local candy = 0
 
 local doorTable = {}
+
+
 
 local interactions = {
     {"He gave you candy, what a nice guy!", 1, false},

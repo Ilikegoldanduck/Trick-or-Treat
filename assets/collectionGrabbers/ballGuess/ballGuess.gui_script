@@ -34,6 +34,7 @@ function on_input(self, action_id, action)
 		if gui.pick_node(gui.get_node(v), action.x, action.y) then
 			if action_id == hash("touch") and action.pressed then
 				msg.post(".", "release_input_focus")
+				gui.set(gui.get_node("text"), "color.w", 0)
 				if i == 1 then
 					gui.set(gui.get_node("ball"), "position", vmath.vector3(480, 200, 0))
 				elseif i == 2 then
