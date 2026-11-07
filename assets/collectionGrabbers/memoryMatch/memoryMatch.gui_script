@@ -10,11 +10,22 @@ local tiles = {
 	"tile9"
 }
 
+local temp = 1
+local temptemp = true
+
 function init(self)
 	for i, v in ipairs(tiles) do
-		gui.animate(gui.get_node(v), "position", vmath.vector3(480, 320, 0), gui.EASING_LINEAR, 1.5, 0, function()
-			gui.animate(gui.get_node(v), "position", vmath.vector3(((i - 1) % 3 + 1) * 200 + 80, (math.floor((i - 1) / 3) + 1) * 150 + 20, 0), gui.EASING_LINEAR, 1.5, 0, function()
-				msg.post(".", "acquire_input_focus")
+		timer.delay(1, false, function()
+			gui.animate(gui.get_node(v), "color.w", 0, gui.EASING_LINEAR, 2, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+			timer.delay(1, false, function()
+				gui.play_flipbook(gui.get_node(v), "untitled")
+			end)
+			timer.delay(2, false, function()
+				gui.animate(gui.get_node(v), "position", vmath.vector3(480, 320, 0), gui.EASING_LINEAR, 1.5, 0, function()
+					gui.animate(gui.get_node(v), "position", vmath.vector3(((i - 1) % 3 + 1) * 200 + 80, (math.floor((i - 1) / 3) + 1) * 150 + 20, 0), gui.EASING_LINEAR, 1.5, 0, function()
+						msg.post(".", "acquire_input_focus")
+					end)
+				end)
 			end)
 		end)
 	end
@@ -41,13 +52,34 @@ function on_message(self, message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
-	for i, v in ipairs(tiles) do
-		if gui.pick_node(gui.get_node(v), action.x, action.y) and action_id == hash("touch") and action.pressed then
-			gui.set_enabled(gui.get_node(v), false)
-			table.remove(tiles, i)
-			if #tiles == 0 then
-				msg.post(".", "release_input_focus")
-				msg.post("main:/minigame collection#main", "trick", {"doors"})
+	if temptemp then
+		for i, v in ipairs(tiles) do
+			if gui.pick_node(gui.get_node(v), action.x, action.y) then
+				if action_id == hash("touch") and action.pressed then
+					temptemp = false
+					if temp ~= 3 then
+						temp = temp + 1
+						gui.animate(gui.get_node(v), "color.w", 0, gui.EASING_LINEAR, 2, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+						timer.delay(1, false, function()
+							temptemp = true
+							gui.play_flipbook(gui.get_node(v), "candy")
+						end)
+					else
+						gui.animate(gui.get_node(v), "color.w", 0, gui.EASING_LINEAR, 2, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+						timer.delay(1, false, function()
+							gui.play_flipbook(gui.get_node(v), "mines")
+							timer.delay(1, false, function()
+								msg.post(".", "release_input_focus")
+								msg.post("main:/minigame collection#main", "trick", {"doors"})
+							end)
+						end)
+					end
+					table.remove(tiles, i)
+				else
+					gui.set(gui.get_node(v), "scale", vmath.vector3(.8, .8, 1))
+				end
+			else
+				gui.set(gui.get_node(v), "scale", vmath.vector3(.7, .7, 1))
 			end
 		end
 	end

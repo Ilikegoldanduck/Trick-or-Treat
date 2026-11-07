@@ -1,5 +1,7 @@
 local clickerTable = {}
 
+local temp = 0
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	for i = 0, 4, 1 do

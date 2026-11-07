@@ -1,14 +1,19 @@
 script: "/assets/collectionGrabbers/memoryMatch/memoryMatch.gui_script"
+textures {
+  name: "memoryMatch"
+  texture: "/assets/collectionGrabbers/memoryMatch/memoryMatch.atlas"
+}
 nodes {
   position {
     x: 280.0
     y: 170.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/mines"
   id: "tile4"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -18,11 +23,12 @@ nodes {
     x: 480.0
     y: 170.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/candy"
   id: "tile3"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -32,11 +38,12 @@ nodes {
     x: 680.0
     y: 170.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/mines"
   id: "tile7"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -46,11 +53,12 @@ nodes {
     x: 280.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/mines"
   id: "tile1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -60,11 +68,12 @@ nodes {
     x: 480.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/mines"
   id: "tile2"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -74,11 +83,12 @@ nodes {
     x: 680.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/candy"
   id: "tile9"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -88,11 +98,12 @@ nodes {
     x: 280.0
     y: 470.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/candy"
   id: "tile6"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -102,11 +113,12 @@ nodes {
     x: 480.0
     y: 470.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/candy"
   id: "tile8"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -116,11 +128,12 @@ nodes {
     x: 680.0
     y: 470.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "memoryMatch/mines"
   id: "tile5"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO

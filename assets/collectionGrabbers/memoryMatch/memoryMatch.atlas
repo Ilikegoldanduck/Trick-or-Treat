@@ -1,0 +1,10 @@
+images {
+  image: "/assets/collectionGrabbers/memoryMatch/candy.png"
+}
+images {
+  image: "/assets/collectionGrabbers/memoryMatch/mines.png"
+}
+images {
+  image: "/assets/collectionGrabbers/memoryMatch/untitled.png"
+}
+extrude_borders: 2

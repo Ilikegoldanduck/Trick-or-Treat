@@ -1,13 +1,14 @@
 script: "/assets/collectionGrabbers/clickclick/clickclick.gui_script"
+textures {
+  name: "clickclick"
+  texture: "/assets/collectionGrabbers/clickclick/clickclick.atlas"
+}
 nodes {
   position {
     x: -100.0
   }
-  size {
-    x: 100.0
-    y: 100.0
-  }
   type: TYPE_BOX
+  texture: "clickclick/candy"
   id: "clicker"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO

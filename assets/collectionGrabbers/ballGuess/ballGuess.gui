@@ -1,59 +1,73 @@
 script: "/assets/collectionGrabbers/ballGuess/ballGuess.gui_script"
+textures {
+  name: "ballGuess"
+  texture: "/assets/collectionGrabbers/ballGuess/ballGuess.atlas"
+}
 nodes {
   position {
     x: 280.0
-    y: 200.0
+    y: 220.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 1.5
+    y: 1.5
   }
   type: TYPE_BOX
+  texture: "ballGuess/cup"
   id: "cup1"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
     x: 680.0
-    y: 200.0
+    y: 220.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 1.5
+    y: 1.5
   }
   type: TYPE_BOX
+  texture: "ballGuess/cup"
   id: "cup3"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
     x: 480.0
-    y: 200.0
+    y: 220.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 1.5
+    y: 1.5
   }
   type: TYPE_BOX
+  texture: "ballGuess/cup"
   id: "cup2"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
-    x: 480.0
-    y: 200.0
+    x: 475.0
+    y: 180.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.4
+    y: 0.4
   }
   type: TYPE_PIE
+  texture: "ballGuess/candy"
   id: "ball"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+layers {
+  name: "layer"
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

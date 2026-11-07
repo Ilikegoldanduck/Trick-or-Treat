@@ -66,10 +66,10 @@ function on_input(self, action_id, action)
 					msg.post("main:/minigame collection#main", "trick", {"doors"})
 				end)
 			else
-				gui.set(gui.get_node(v), "scale", vmath.vector3(1.2, 1.2, 1))
+				gui.set(gui.get_node(v), "scale", vmath.vector3(2.2, 2.2, 1))
 			end
 		else
-			gui.set(gui.get_node(v), "scale", vmath.vector3(1, 1, 1))
+			gui.set(gui.get_node(v), "scale", vmath.vector3(2, 2, 1))
 		end
 	end
 end
