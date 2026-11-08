@@ -46,7 +46,15 @@ local interactions = {
     {"Uhhhh how to count I forgor\nCan please help?", {"counting", 5}, false},
     {"Omggg my first trick or treater!! \nHere!! Take all this candy!!", 10, false}, --49 Candies here
     {"uhm... do you want something..?", {"stare3", -6}, false}, --Candy wrappers as eye covering here --43 Candies
-    {"Hi! Do you want to come in?\nI promise nothing will harm you here :p", {"rest2", 2}, false}
+    {"Hi! Do you want to come in?\nI promise nothing will harm you here :p", {"rest2", 2}, false},
+    {"Ughhh I'm so tired... What do you want..\nOh? Candy? Sure...", 1, false}, -- 46 Candies
+    {"Hi!!! Do you want to perhaps... \nGive me candy..? Pweasee >.<", -1, false}, -- 45 Candies
+    {"Trick HA! Gottem. Anyways have a good day", 0, false},
+    {"Hi.. Do you believe in... ascending....?", {"rapture", 1}, false}, -- 46 Candies
+    {"Did you just see what happened next door??? \nBro that man just disintegrated like what???", 0, false},
+    {"We welcome the newly wedded couple: Her/She and Kit Cat. \nPlease applaud", {"marriage", -2}, false}, -- 44 Candies
+    {"Trick or treat!! Candy yay :D", 1, false},
+    {"Trick or treat!!!\n\nWh-", {"rest3", 0}, false} -- game end
 }
 
 function doors.getDoor()
