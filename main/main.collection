@@ -79,6 +79,12 @@ embedded_instances {
   "  data: \"collection: \\\"/assets/minigames/stare.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"chopsticks\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/assets/minigames/chopsticks.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {
