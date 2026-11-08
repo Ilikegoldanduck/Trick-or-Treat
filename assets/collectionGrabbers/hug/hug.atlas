@@ -1,1 +1,10 @@
+images {
+  image: "/assets/collectionGrabbers/hug/hug1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/hug/hug2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/hug/hug3.png"
+}
 extrude_borders: 2
