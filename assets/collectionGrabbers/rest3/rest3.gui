@@ -42,8 +42,8 @@ nodes {
 }
 nodes {
   position {
-    x: 745.0
-    y: 396.0
+    x: 480.0
+    y: 440.0
   }
   scale {
     x: 2.0
@@ -54,11 +54,12 @@ nodes {
   id: "candy"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  visible: false
 }
 nodes {
   position {
-    x: 745.0
-    y: 396.0
+    x: 480.0
+    y: 440.0
   }
   scale {
     x: 2.0
@@ -69,6 +70,47 @@ nodes {
   id: "scary"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 480.0
+    y: 440.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "rest/q1"
+  id: "q"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 200.0
+    y: 400.0
+  }
+  type: TYPE_BOX
+  texture: "rest/tile1"
+  id: "tile"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 760.0
+    y: 400.0
+  }
+  type: TYPE_BOX
+  texture: "rest/tile1"
+  id: "tile1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
 }
 layers {
   name: "layer"
