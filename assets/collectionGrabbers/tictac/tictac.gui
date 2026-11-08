@@ -1,13 +1,18 @@
 script: "/assets/collectionGrabbers/tictac/tictac.gui_script"
+textures {
+  name: "tictac"
+  texture: "/assets/collectionGrabbers/tictac/tictac.atlas"
+}
 nodes {
   position {
     x: -406.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.5
+    y: 0.5
   }
   type: TYPE_BOX
+  texture: "tictac/cross1"
   id: "cross"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -16,11 +21,12 @@ nodes {
   position {
     x: -406.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.5
+    y: 0.5
   }
   type: TYPE_BOX
+  texture: "tictac/circle1"
   id: "circle"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -31,13 +37,15 @@ nodes {
     y: 320.0
   }
   size {
-    x: 100.0
-    y: 100.0
+    x: 300.0
+    y: 300.0
   }
   type: TYPE_BOX
+  texture: "tictac/board1"
   id: "tictacboard"
   inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
+  enabled: false
+  visible: false
 }
 nodes {
   position {
@@ -173,6 +181,21 @@ nodes {
   parent: "tictacboard"
   inherit_alpha: true
   alpha: 0.33
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 494.0
+    y: 301.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "tictac/board1"
+  id: "boardVisual"
+  inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 material: "/builtins/materials/gui.material"

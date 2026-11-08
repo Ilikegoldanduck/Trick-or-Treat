@@ -1,0 +1,28 @@
+images {
+  image: "/assets/collectionGrabbers/tictac/board1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/board2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/board3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/circle1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/circle2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/circle3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/cross1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/cross2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/tictac/cross3.png"
+}
+extrude_borders: 2
