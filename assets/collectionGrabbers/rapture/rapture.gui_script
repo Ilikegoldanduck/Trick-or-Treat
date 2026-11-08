@@ -1,0 +1,42 @@
+function init(self)
+	local k = gui.get_node("box")
+	local i = "frame00"
+	timer.delay(1, false, function()
+		gui.play_flipbook(k, i .. "07")
+	end)
+	timer.delay(1.2, false, function()
+		gui.play_flipbook(k, i .. "08")
+	end)
+	timer.delay(1.4, false, function()
+		gui.play_flipbook(k, i .. "09")
+	end)
+	local index = 1
+	local index2 = 1
+	timer.delay(1.6, false, function()
+		gui.play_flipbook(k, i .. "10")
+		timer.delay(.2, true, function(self, handle)
+			gui.play_flipbook(k, i .. tostring(9 + index))
+			index = index + 1
+			if index > 3 then
+				index = 1
+				index2 = index2 + 1
+			end
+			if index2 == 25 then
+				timer.cancel(handle)
+				index2 = 1
+				timer.delay(.2, true, function()
+					gui.play_flipbook(k, i .. tostring(12 + index))
+					index = index + 1
+					if index > 3 then
+						index = 1
+						index2 = index2 + 1
+					end
+					if index2 >= 10 then
+						msg.post("main:/soundHandler#soundHandler", "sound", {"closeDoor"})
+					end
+				end)
+			end
+		end)
+	end)
+	
+end

@@ -1,0 +1,31 @@
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0006.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0007.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0008.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0009.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0010.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0011.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0012.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0013.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0014.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rapture/frame0015.png"
+}
+extrude_borders: 2
