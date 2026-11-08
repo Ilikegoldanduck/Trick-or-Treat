@@ -3,8 +3,8 @@ scale_along_z: 0
 embedded_instances {
   id: "go"
   data: "components {\n"
-  "  id: \"rest2\"\n"
-  "  component: \"/assets/collectionGrabbers/rest2/rest2.gui\"\n"
+  "  id: \"rest3\"\n"
+  "  component: \"/assets/collectionGrabbers/rest3/rest3.gui\"\n"
   "}\n"
   ""
 }
