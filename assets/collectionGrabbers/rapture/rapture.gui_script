@@ -32,7 +32,7 @@ function init(self)
 						index2 = index2 + 1
 					end
 					if index2 >= 10 then
-						msg.post("main:/soundHandler#soundHandler", "sound", {"closeDoor"})
+						msg.post("main:/minigame collection#main", "trick", {"doors"})
 					end
 				end)
 			end
