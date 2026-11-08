@@ -53,7 +53,10 @@ local interactions = {
     {"Hi.. Do you believe in... ascending....?", {"rapture", 1}, false}, -- 46 Candies
     {"Did you just see what happened next door??? \nBro that man just disintegrated like what???", 0, false},
     {"We welcome the newly wedded couple: Her/She and Kit Cat. \nPlease applaud", {"marriage", -2}, false}, -- 44 Candies
-    {"Trick or treat!! Candy yay :D", 1, false},
+    {"Hii!! Omgg we're just about done with our candies. \nYou're so lucky", 2, false}, -- 46 Candies
+    {"Uhm.. I don't have candy actually... \nCould I just take one from yours? Thanks", -1, false}, -- 45 Candies
+    {"I'm done with this holiday. Just take everything :/", 4, false}, -- 49 Candies
+    {"Trick or treat!! Candy yay :D", 1, false}, -- 50 Candies
     {"Trick or treat!!!\n\nWh-", {"rest3", 0}, false} -- game end
 }
 
