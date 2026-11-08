@@ -41,7 +41,12 @@ local interactions = {
     {".... . .-. . -.-.-- / - .- -.- . / - .... .. ... -.-.-- / -.-. -.-.-.", 1, false},
     {"Oh! I'm so sorry!! That's my other other neighbor, Mr. Morse Codak (FICTIONAL CHARACTER). \nHe works in the navy!", 1, false},
     {"Oh! I'm so sorry!! That's my other other other neighbor, Mr. Apollo G. (FICTIONAL CHARACTER). \nwait... that's me...", 0, false},
-    {"Oh! Tic Tac Toe... The most sophisticated of games.... \nI. will. win. this.", {"tictac", 1}, false}
+    {"Tic Tac Toe... The world's most sophisticated game.... \nI. will. win. this.", {"tictac", 0}, false},
+    {"Hi!! That's such a cute costume :3 \nI'm so sorry I thought Halloween was 2 weeks ago!! I don't have candy now :c", 0, false},
+    {"Uhhhh how to count I forgor\nCan please help?", {"counting", 5}, false},
+    {"Omggg my first trick or treater!! \nHere!! Take all this candy!!", 10, false}, --49 Candies here
+    {"uhm... do you want something..?", {"stare3", -6}, false}, --Candy wrappers as eye covering here --43 Candies
+    {"Hi! Do you want to come in?\nI promise nothing will harm you here :p", {"rest2", 2}, false}
 }
 
 function doors.getDoor()
