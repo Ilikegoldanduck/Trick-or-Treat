@@ -1,0 +1,102 @@
+script: "/assets/collectionGrabbers/rest2/rest2.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "rest"
+  texture: "/assets/collectionGrabbers/rest/rest.atlas"
+}
+nodes {
+  position {
+    x: 256.0
+    y: 222.0
+  }
+  type: TYPE_BOX
+  texture: "rest/cat1"
+  id: "cat"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 161.0
+    y: 498.0
+  }
+  type: TYPE_BOX
+  texture: "rest/candy1"
+  id: "candy"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 139.0
+  }
+  type: TYPE_BOX
+  texture: "rest/fire1"
+  id: "fire"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 661.0
+    y: 213.0
+  }
+  type: TYPE_BOX
+  texture: "rest/man1"
+  id: "man"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 652.0
+    y: 332.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "default"
+  id: "manText"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 257.0
+    y: 333.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "default"
+  id: "catText"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 760.0
+    y: 504.0
+  }
+  type: TYPE_BOX
+  texture: "rest/candy1"
+  id: "candy1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

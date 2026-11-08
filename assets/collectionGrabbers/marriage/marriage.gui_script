@@ -21,10 +21,10 @@ function init(self)
 end
 
 function on_input(self, action_id, action)
-	if gui.pick_node(gui.get_node("tile"), action.x, action.y) and action_id == hash("tough") and action.pressed then
+	if gui.pick_node(gui.get_node("tile"), action.x, action.y) and action_id == hash("touch") and action.pressed then
 		msg.post("main:/soundHandler#soundHandler", "sound", {"cup"})
 		gui.set_enabled(gui.get_node("tile"), false)
-		msg.post(".", "acquire_input_focus")
+		msg.post(".", "release_input_focus")
 		msg.post("main:/minigame collection#main", "trick", {"doors"})
 	end
 end
