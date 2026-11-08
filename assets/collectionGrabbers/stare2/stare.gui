@@ -1,0 +1,51 @@
+script: "/assets/collectionGrabbers/stare/stare.gui_script"
+textures {
+  name: "stare"
+  texture: "/assets/collectionGrabbers/stare2/stare2.atlas"
+}
+nodes {
+  position {
+    x: 330.0
+    y: 320.0
+  }
+  type: TYPE_BOX
+  texture: "stare/eye1"
+  id: "eye1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 630.0
+    y: 320.0
+  }
+  type: TYPE_BOX
+  texture: "stare/eye1"
+  id: "eye2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 330.0
+    y: 116.0
+  }
+  type: TYPE_BOX
+  texture: "stare/aid1"
+  id: "aid1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 630.0
+    y: 114.0
+  }
+  type: TYPE_BOX
+  texture: "stare/aid1"
+  id: "aid2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

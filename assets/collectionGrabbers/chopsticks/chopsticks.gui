@@ -1,13 +1,15 @@
+script: "/assets/collectionGrabbers/chopsticks/chopsticks.gui_script"
+textures {
+  name: "chopsticks"
+  texture: "/assets/collectionGrabbers/chopsticks/chopsticks.atlas"
+}
 nodes {
   position {
     x: 300.0
-    y: 50.0
-  }
-  size {
-    x: 100.0
-    y: 100.0
+    y: 30.0
   }
   type: TYPE_BOX
+  texture: "chopsticks/finger1"
   id: "leftHand"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -15,13 +17,13 @@ nodes {
 nodes {
   position {
     x: 660.0
-    y: 50.0
+    y: 30.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: -1.0
   }
   type: TYPE_BOX
+  texture: "chopsticks/finger1"
   id: "rightHand"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -29,13 +31,13 @@ nodes {
 nodes {
   position {
     x: 300.0
-    y: 590.0
+    y: 620.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    y: -1.0
   }
   type: TYPE_BOX
+  texture: "chopsticks/finger1"
   id: "leftHandE"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -43,14 +45,26 @@ nodes {
 nodes {
   position {
     x: 660.0
-    y: 590.0
+    y: 620.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: -1.0
+    y: -1.0
   }
   type: TYPE_BOX
+  texture: "chopsticks/finger1"
   id: "rightHandE"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 720.0
+  }
+  type: TYPE_BOX
+  texture: "chopsticks/knife1"
+  id: "knife"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }

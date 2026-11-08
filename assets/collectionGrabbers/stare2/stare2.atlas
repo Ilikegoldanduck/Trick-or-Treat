@@ -1,0 +1,19 @@
+images {
+  image: "/assets/collectionGrabbers/stare2/aid1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/stare2/aid2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/stare2/aid3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/stare2/eye1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/stare2/eye2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/stare2/eye3.png"
+}
+extrude_borders: 2

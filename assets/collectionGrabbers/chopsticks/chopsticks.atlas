@@ -1,0 +1,19 @@
+images {
+  image: "/assets/collectionGrabbers/chopsticks/finger1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/chopsticks/finger2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/chopsticks/finger3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/chopsticks/knife1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/chopsticks/knife2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/chopsticks/knife3.png"
+}
+extrude_borders: 2
