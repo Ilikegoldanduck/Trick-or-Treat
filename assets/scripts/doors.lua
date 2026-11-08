@@ -26,7 +26,8 @@ local interactions = {
     {"A... coinflip...?\nI mean gambling never hurt nobody righttt", {"coinFlip", 1}, false},
     {"He gave me candy :D", 1, false},
     {"umm.. are you okay..?", {"stare", 1}, false},
-    {"You aren't weird right..?\nI guess I should come inside..?", {"rest", 1}, false}
+    {"You aren't weird right..?\nI guess I should come inside..?", {"rest", 1}, false},
+    {"Finger game..? Chopsticks..? What..?", {"chopsticks", 1}, false}
 }
 
 function doors.getDoor()

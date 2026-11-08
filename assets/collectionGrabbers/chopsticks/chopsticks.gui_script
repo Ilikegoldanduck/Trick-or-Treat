@@ -1,0 +1,57 @@
+local yourHand = {
+	1, 1
+}
+
+local enemyHand = {
+	1, 1
+}
+
+--index 1 = left index 2 = right
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Learn more: https://defold.com/manuals/message-passing/
+	-- Remove this function if not needed
+end
+
+local chosenHand = nil
+local yourTurn = true
+
+function on_input(self, action_id, action)
+	if yourTurn then
+		if chosenHand then
+			for i, v in ipairs({"leftHandE", "rightHandE"}) do
+
+			end
+		end
+		if
+			for i, v in ipairs({"leftHand", "rightHand"}) do
+				if gui.pick_node(gui.get_node(v), action.x, action.y) then
+					chosenHand = i
+				end
+			end
+		end
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end
