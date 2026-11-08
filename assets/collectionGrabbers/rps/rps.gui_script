@@ -9,6 +9,7 @@ local inputs = {
 }
 
 function playGame()
+	msg.post(".", "release_input_focus")
 	for i, v in ipairs(inputs) do
 		gui.animate(gui.get_node(v), "color.w", 0, gui.EASING_LINEAR, 1, 0)
 	end
@@ -17,7 +18,6 @@ function playGame()
 		gui.animate(gui.get_node("gun"), "color.w", 1, gui.EASING_LINEAR, 2, 0, function()
 		msg.post("main:/soundHandler#soundHandler", "sound", {"gun"})
 			timer.delay(.5, false, function()
-				msg.post(".", "release_input_focus")
 				msg.post("main:/minigame collection#main", "trick", {"doors"})
 			end)
 		end)

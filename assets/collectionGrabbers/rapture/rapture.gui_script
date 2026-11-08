@@ -24,7 +24,7 @@ function init(self)
 			if index2 == 25 then
 				timer.cancel(handle)
 				index2 = 1
-				timer.delay(.2, true, function()
+				timer.delay(.2, true, function(self, handle2)
 					gui.play_flipbook(k, i .. tostring(12 + index))
 					index = index + 1
 					if index > 3 then
@@ -32,6 +32,7 @@ function init(self)
 						index2 = index2 + 1
 					end
 					if index2 >= 10 then
+						timer.cancel(handle2)
 						msg.post("main:/minigame collection#main", "trick", {"doors"})
 					end
 				end)
