@@ -1,6 +1,6 @@
 function init(self)
 	local index = 1
-	timer.delay(1, false, function()
+	timer.delay(.2, true, function()
 		index = index + 1
 		if index > 3 then
 			index = 1

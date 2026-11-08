@@ -1,3 +1,4 @@
+script: "/assets/collectionGrabbers/hug/hug.gui_script"
 textures {
   name: "hug"
   texture: "/assets/collectionGrabbers/hug/hug.atlas"
