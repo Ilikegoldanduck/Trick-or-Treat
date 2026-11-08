@@ -28,7 +28,10 @@ local interactions = {
     {"umm.. are you okay..?", {"stare", 1}, false},
     {"You aren't weird right..?\nI guess I should come inside..?", {"rest", 1}, false},
     {"Finger game..? Chopsticks..? What..?", {"chopsticks", 1}, false},
-    {"Oh.. hi.... Do.. you want something..?", {"stare2", 1}, false}
+    {"Oh.. hi.... Do.. you want something..?", {"stare2", 2}, false},
+    {"Oh thanks! The most normal guy here in a while...", 1, false},
+    {"Oh..? Hi again! Thank you!", 1, false},
+    {"Uhm... hi...? Wh-", {"man", 0}, false}
 }
 
 function doors.getDoor()
