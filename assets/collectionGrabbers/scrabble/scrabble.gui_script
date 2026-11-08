@@ -53,7 +53,7 @@ function on_input(self, action_id, action)
 	elseif selected then
 		gui.set(gui.get_node(selected), "position", vmath.vector3(action.x, action.y, 0))
 		for i, v in ipairs(tileTable) do
-			if gui.pick_node(gui.get_node(v .. "1"), action.x, action.y) and selected .. "1" == v then
+			if gui.pick_node(gui.get_node(v .. "1"), action.x, action.y) and selected == v then
 				gui.set(gui.get_node(selected), "position", gui.get(gui.get_node(v .. "1"), "position"))
 				selected = nil
 				table.remove(tileTable, selectedIndex)
