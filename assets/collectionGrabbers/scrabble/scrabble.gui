@@ -1,14 +1,25 @@
+script: "/assets/collectionGrabbers/scrabble/scrabble.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "scrabble"
+  texture: "/assets/collectionGrabbers/scrabble/scrabble.atlas"
+}
 nodes {
   position {
     x: 453.0
     y: 75.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/c1"
   id: "c"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -17,12 +28,14 @@ nodes {
     x: 108.0
     y: 68.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/a1"
   id: "a"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -31,26 +44,46 @@ nodes {
     x: 802.0
     y: 97.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.6
+    y: 0.6
   }
   type: TYPE_BOX
+  texture: "scrabble/tile1"
   id: "n"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 10.0
+    y: 10.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+  }
+  type: TYPE_TEXT
+  text: "n"
+  font: "default"
+  id: "text"
+  parent: "n"
+  inherit_alpha: true
 }
 nodes {
   position {
     x: 639.0
     y: 89.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/d1"
   id: "d"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -59,12 +92,14 @@ nodes {
     x: 281.0
     y: 86.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/y1"
   id: "y"
+  layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -73,11 +108,12 @@ nodes {
     x: 180.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/tile1"
   id: "c1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -87,11 +123,12 @@ nodes {
     x: 330.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/tile1"
   id: "a1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -101,11 +138,12 @@ nodes {
     x: 480.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/tile1"
   id: "n1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -115,11 +153,12 @@ nodes {
     x: 630.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/tile1"
   id: "d1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -129,14 +168,18 @@ nodes {
     x: 780.0
     y: 320.0
   }
-  size {
-    x: 100.0
-    y: 100.0
+  scale {
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
+  texture: "scrabble/tile1"
   id: "y1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+layers {
+  name: "layer"
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

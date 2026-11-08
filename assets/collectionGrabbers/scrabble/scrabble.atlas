@@ -1,1 +1,46 @@
+images {
+  image: "/assets/collectionGrabbers/scrabble/a1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/a2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/a3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/c1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/c2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/c3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/d1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/d2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/d3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/tile1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/tile2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/tile3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/y1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/y2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/scrabble/y3.png"
+}
 extrude_borders: 2
