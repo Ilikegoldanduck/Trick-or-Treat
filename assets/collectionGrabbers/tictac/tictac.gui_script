@@ -1,13 +1,30 @@
+local guiTable = {}
+
 local circle = nil
 
 function init(self)
 	timer.delay(1, false, function()
-		local temp = gui.clone(gui.get_node("cross"))
+		msg.post("main:/soundHandler#soundHandler", "sound", {"bandaid"})
+		local temp = gui.clone(gui.get_node("cross"))	
 		gui.set_position(temp, vmath.vector3(480, 320, 0))
+		table.insert(guiTable, temp)
 		msg.post(".", "acquire_input_focus")
 		circle = gui.clone(gui.get_node("circle"))
 		gui.set_position(circle, vmath.vector3(50, 50, 0))
+		table.insert(guiTable, circle)
 	end)
+	local index = 1
+	--[[ Temporary for after assets are made
+	timer.delay(.2, true, function()
+		for i, v in ipairs(guiTable) do
+			gui.play_flipbook(v, v .. tostring(index))
+		end
+		index = index + 1
+		if index > 3 then
+			index = 1
+		end
+	)
+	]]
 end
 
 function final(self)
@@ -28,6 +45,46 @@ function on_message(self, message_id, message, sender)
 	-- Remove this function if not needed
 end
 
+local direction = 1
+
+local turn1 = nil
+
+function enemyTurn1()
+	local temp = gui.clone(gui.get_node("cross"))
+	table.insert(guiTable, temp)
+	if tileTable[4] == nil then
+		tileTable[6] = nil
+		gui.set_position(temp, vmath.vector3(580, 320, 0))
+		turn1 = 6
+	else
+		tileTable[4] = nil
+		gui.set_position(temp, vmath.vector3(380, 320, 0))
+		turn1 = 4
+	end
+	msg.post("main:/soundHandler#soundHandler", "sound", {"bandaid"})
+	timer.delay(1, false, function()
+		circle = gui.clone(gui.get_node("circle"))
+		gui.set_position(circle, vmath.vector3(50, 50, 0))
+		table.insert(guiTable, circle)
+	end)
+	turn1 = true
+end
+
+function enemyTurn2()
+	local temp = gui.clone(gui.get_node("cross"))
+	msg.post("main:/soundHandler#soundHandler", "sound", {"bandaid"})
+	table.insert(guiTable, temp)
+	if turn1 == 4 then
+		gui.set_position(temp, vmath.vector3(280, 320, 0))
+	else
+		gui.set_position(temp, vmath.vector3(680, 320, 0))
+	end
+	msg.post(".", "release_input_focus")
+	timer.delay(1, false, function()
+		msg.post("main:/minigame collection#main", "trick", {"doors"})
+	end)
+end
+
 local tileTable = {
 	"tile1",
 	"tile2",
@@ -44,15 +101,23 @@ local selected = false
 function on_input(self, action_id, action)
 	if circle ~= nil and gui.pick_node(circle, action.x, action.y) and action_id == hash("touch") and action.pressed and not selected then
 		selected = true
-	elseif selected and action_id == hash("touch") and action.pressed then
+	elseif circle ~= nil and selected and action_id == hash("touch") and action.pressed then
 		for i, v in ipairs(tileTable) do
-			if gui.pick_node(gui.get_node(v), action.x, action.y) then
+			if v ~= nil and gui.pick_node(gui.get_node(v), action.x, action.y) then
+				msg.post("main:/soundHandler#soundHandler", "sound", {"bandaid"})
 				selected = false
 				local t = gui.get_position(gui.get_node(v))
 				pprint(gui.get_position(gui.get_node(v)))
 				gui.set_position(circle, vmath.vector3(t.x + 480, t.y + 320, 0))
-				table.remove(tileTable, i)
+				tileTable[i] = nil
 				circle = nil
+				timer.delay(1, false, function()
+					if turn1 == nil then
+						enemyTurn1()
+					else
+						enemyTurn2()
+					end
+				end)
 			end
 		end
 	end
