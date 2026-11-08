@@ -5,7 +5,11 @@ local stareTable = {
 	{"aid2", "aid"},
 	{"eye", "eye"},
 	{"eye3", "eye"},
+	{"eye4", "eye"},
+	{"eye5", "eye"},
 	{"aid", "aid"},
+	{"aid4", "aid"},
+	{"aid5", "aid"},
 	{"aid3", "aid"}
 }
 
@@ -27,6 +31,8 @@ local aidTable = {
 	"aid",
 	"aid1",
 	"aid3",
+	"aid4",
+	"aid5",
 	"aid2"
 }
 
@@ -34,6 +40,8 @@ local eyeTable = {
 	"eye",
 	"eye1",
 	"eye3",
+	"eye4",
+	"eye5",
 	"eye2"
 }
 
