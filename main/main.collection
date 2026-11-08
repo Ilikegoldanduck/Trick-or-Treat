@@ -115,6 +115,12 @@ embedded_instances {
   "  data: \"collection: \\\"/assets/minigames/tictac.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"counting\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/assets/minigames/counting.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

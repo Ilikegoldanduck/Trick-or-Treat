@@ -1,0 +1,102 @@
+script: "/assets/collectionGrabbers/counting/counting.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "counting"
+  texture: "/assets/collectionGrabbers/counting/counting.atlas"
+}
+nodes {
+  position {
+    x: 78.0
+    y: 83.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  type: TYPE_BOX
+  texture: "counting/c1"
+  id: "c"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 745.0
+    y: 428.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  type: TYPE_BOX
+  texture: "counting/a1"
+  id: "a"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 405.0
+    y: 273.0
+  }
+  scale {
+    x: 0.45
+    y: 0.45
+  }
+  type: TYPE_BOX
+  texture: "counting/tile1"
+  id: "tile"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 12.0
+    y: 10.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+  }
+  type: TYPE_TEXT
+  text: "n"
+  font: "default"
+  id: "text"
+  parent: "tile"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 166.0
+    y: 498.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  type: TYPE_BOX
+  texture: "counting/d1"
+  id: "d"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 694.0
+    y: 171.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  type: TYPE_BOX
+  texture: "counting/y1"
+  id: "y"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

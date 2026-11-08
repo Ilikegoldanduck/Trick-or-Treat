@@ -1,0 +1,46 @@
+images {
+  image: "/assets/collectionGrabbers/counting/a1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/a2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/a3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/c1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/c2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/c3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/d1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/d2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/d3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/y1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/y2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/y3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/tile1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/tile2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/counting/tile3.png"
+}
+extrude_borders: 2
