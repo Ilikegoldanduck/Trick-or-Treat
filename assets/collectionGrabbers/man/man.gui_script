@@ -1,0 +1,5 @@
+function init(self)
+	timer.delay(10, false, function()
+		msg.post("main:/minigame collection#main", "trick", {"doors"})
+	end)
+end

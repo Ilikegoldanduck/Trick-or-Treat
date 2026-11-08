@@ -1,0 +1,10 @@
+name: "man"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"man\"\n"
+  "  component: \"/assets/collectionGrabbers/man/man.gui\"\n"
+  "}\n"
+  ""
+}

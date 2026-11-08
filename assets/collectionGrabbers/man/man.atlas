@@ -1,0 +1,4 @@
+images {
+  image: "/assets/collectionGrabbers/man/man.png"
+}
+extrude_borders: 2
