@@ -26,24 +26,6 @@ function init(self)
 	end)
 end
 
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
-end
-
 local tileTable = {
 	"tile1",
 	"tile2",
@@ -122,10 +104,4 @@ function on_input(self, action_id, action)
 	if selected and circle ~= nil then
 		gui.set_position(circle, vmath.vector3(action.x, action.y, 0))
 	end
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
 end
