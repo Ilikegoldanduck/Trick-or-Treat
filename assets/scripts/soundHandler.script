@@ -1,5 +1,7 @@
 function on_message(self, message_id, message, sender)
 	if message_id == hash("sound") then
 		sound.play("#" .. message[1])
+	elseif message_id == hash("soundStop") then
+		sound.stop("#" .. message[1])
 	end
 end

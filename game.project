@@ -22,3 +22,6 @@ scale_mode = stretch
 [project]
 title = Trick or Treat
 
+[sound]
+max_sound_sources = 32
+

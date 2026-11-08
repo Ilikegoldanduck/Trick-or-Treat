@@ -17,6 +17,10 @@ function init(self)
 			index = 1
 		end
 	end)
+	msg.post("main:/soundHandler#soundHandler", "sound", {"fire"})
+	timer.delay(554, true, function()
+		msg.post("main:/soundHandler#soundHandler", "sound", {"fire"})
+	end)
 end
 
 function final(self)
@@ -40,6 +44,7 @@ end
 function on_input(self, action_id, action)
 	if gui.pick_node("candy", action.x, action.y) then
 		if action_id == hash("touch") and action.pressed then
+			msg.post("main:/soundHandler#soundHandler", "soundStop", {"fire"})
 			msg.post("main:/soundHandler#soundHandler", "sound", {"candy"})
 			msg.post("main:/minigame collection#main", "trick", {"doors"})
 		else
