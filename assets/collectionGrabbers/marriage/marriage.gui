@@ -1,2 +1,60 @@
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "marriage"
+  texture: "/assets/collectionGrabbers/marriage/marriage.atlas"
+}
+nodes {
+  position {
+    x: 480.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "marriage/hold1"
+  id: "hold"
+  pivot: PIVOT_S
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 467.0
+    y: 405.0
+  }
+  scale {
+    x: 3.0
+  }
+  type: TYPE_BOX
+  texture: "marriage/tile1"
+  id: "tile"
+  pivot: PIVOT_S
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 5.333333
+    y: 108.0
+  }
+  scale {
+    x: 1.2
+    y: 4.5
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Pay 2 Candies"
+  font: "default"
+  id: "text"
+  parent: "tile"
+  inherit_alpha: true
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

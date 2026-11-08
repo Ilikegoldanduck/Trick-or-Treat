@@ -1,0 +1,19 @@
+images {
+  image: "/assets/collectionGrabbers/marriage/hold1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/marriage/hold2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/marriage/hold3.png"
+}
+images {
+  image: "/assets/collectionGrabbers/marriage/tile1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/marriage/tile2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/marriage/tile3.png"
+}
+extrude_borders: 2

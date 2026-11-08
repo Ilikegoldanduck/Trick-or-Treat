@@ -1,0 +1,10 @@
+name: "rest"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"rest2\"\n"
+  "  component: \"/assets/collectionGrabbers/rest2/rest2.gui\"\n"
+  "}\n"
+  ""
+}
