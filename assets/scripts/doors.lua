@@ -31,7 +31,9 @@ local interactions = {
     {"Oh.. hi.... Do.. you want something..?", {"stare2", 2}, false},
     {"Oh thanks! The most normal guy here in a while...", 1, false},
     {"Oh..? Hi again! Thank you!", 1, false},
-    {"Uhm... hi...? Wh-", {"man", 0}, false}
+    {"Uhm... hi...? Wh-", {"man", 0}, false},
+    {"Woah! Four CANDIES????\nTotally not just for convenience", 4, false},
+    {"Mwahahahaha!!! I'm the guy that appears when you get 25 candies!! >:3\nIt's time! I.. Challenge... You.... TO..... A...... hugging competition c:", {"hug", 0}, false}
 }
 
 function doors.getDoor()
