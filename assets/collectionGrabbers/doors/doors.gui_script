@@ -4,7 +4,9 @@ local onDoor = false
 local inChat = false
 
 function init(self)
-	msg.post(".", "acquire_input_focus")
+	timer.delay(.5, false, function()
+		msg.post(".", "acquire_input_focus")
+	end)
 end
 
 function check()
@@ -67,6 +69,7 @@ function on_input(self, action_id, action)
 			if type(treat) == "number" then
 
 			else
+				msg.post(".", "release_input_focus")
 				msg.post("go#doors", "trick", {treat})
 			end
 			inChat = false
