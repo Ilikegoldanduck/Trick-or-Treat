@@ -5,7 +5,7 @@ fonts {
 }
 textures {
   name: "rest"
-  texture: "/assets/collectionGrabbers/rest/rest.atlas"
+  texture: "/assets/collectionGrabbers/rest3/rest3.atlas"
 }
 nodes {
   position {
@@ -33,10 +33,45 @@ nodes {
   type: TYPE_TEXT
   text: "-text-"
   font: "default"
-  id: "text"
+  id: "manText"
   pivot: PIVOT_S
   parent: "man"
+  layer: "layer"
   inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    x: 745.0
+    y: 396.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "rest/candy1"
+  id: "candy"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 745.0
+    y: 396.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "rest/scary1"
+  id: "scary"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+layers {
+  name: "layer"
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

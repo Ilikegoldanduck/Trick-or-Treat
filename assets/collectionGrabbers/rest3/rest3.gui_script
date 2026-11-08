@@ -1,7 +1,10 @@
 local restTable = {
 	"man",
 	"tile",
-	"tile1"
+	"tile1",
+	"scary",
+	"candy",
+	"q"
 }
 
 function init(self)
@@ -20,14 +23,10 @@ function init(self)
 			index = 1
 		end
 	end)
-	msg.post("main:/soundHandler#soundHandler", "sound", {"fire"})
-	timer.delay(554, true, function()
-		if not stop then
-			msg.post("main:/soundHandler#soundHandler", "sound", {"fire"})
-		end
-	end)
 end
 
+local chatIndex = 0
+local chatcd = false
 local manText = {
 	"Hi!",
 	"Say... You've been through a lot right?",
@@ -40,6 +39,31 @@ local manText = {
 	"Do you even have... free will?",
 	"Did you... even enjoy this..?"
 }
+
+function nextChat()
+	chatcd = true
+	timer.delay(.5, false, function()
+		chatcd = false
+	end)
+	chatIndex = chatIndex + 1
+	if (chatIndex == 3 or chatIndex == 7) then
+		gui.set_visible(gui.get_node("candy"), true)
+	else
+		gui.set_visible(gui.get_node("candy"), false)
+	end
+	if (chatIndex == 4 or chatIndex == 8) then
+		gui.set_visible(gui.get_node("scary"), true)
+	else
+		gui.set_visible(gui.get_node("scary"), false)
+	end
+	if (chatIndex == 5 or chatIndex == 6 or chatIndex == 9) then
+		gui.set_visible(gui.get_node("q"), true)
+	else
+		gui.set_visible(gui.get_node("q"), false)
+	end
+	gui.set_visible(gui.get_node("manText"), true)
+	gui.set_text(gui.get_node("manText"), )
+end
 
 function on_input(self, action_id, action)
 
