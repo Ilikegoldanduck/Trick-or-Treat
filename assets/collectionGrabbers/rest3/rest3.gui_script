@@ -35,7 +35,7 @@ local manText = {
 	"Seeing things that are downright weird and insane!",
 	"What do you think this all means?",
 	"Why are you collecting candies?",
-	"Why are we experiencing these... phenomenons?",
+	"Why are you experiencing these... phenomenons?",
 	"Do you even have... free will?",
 	"Did you... even enjoy this..?"
 }
@@ -45,8 +45,17 @@ local onTiles = false
 function endGame()
 	msg.post(".", "release_input_focus")
 	for i,v in ipairs(restTable) do
-		gui.set_enabled(gui.get_node(v), false)
+		if v == "man" then
+			timer.delay(1, false, function()
+				gui.set_enabled(gui.get_node(v), false)
+			end)
+		else
+			gui.set_enabled(gui.get_node(v), false)
+		end
 	end
+	timer.delay(5, false, function()
+		
+	end)
 end
 
 function nextChat()
