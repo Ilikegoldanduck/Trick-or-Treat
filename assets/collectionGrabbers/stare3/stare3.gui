@@ -1,15 +1,16 @@
+script: "/assets/collectionGrabbers/stare3/stare3.gui_script"
 textures {
   name: "stare3"
   texture: "/assets/collectionGrabbers/stare3/stare3.atlas"
 }
 nodes {
   position {
-    x: 141.0
-    y: 317.0
+    x: 128.0
+    y: 447.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/eye1"
@@ -23,8 +24,8 @@ nodes {
     y: 316.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/eye1"
@@ -38,8 +39,8 @@ nodes {
     y: 72.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/aid1"
@@ -50,12 +51,12 @@ nodes {
 }
 nodes {
   position {
-    x: 285.0
-    y: 474.0
+    x: 336.0
+    y: 511.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/eye1"
@@ -69,8 +70,8 @@ nodes {
     y: 85.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/aid1"
@@ -81,12 +82,12 @@ nodes {
 }
 nodes {
   position {
-    x: 629.0
-    y: 482.0
+    x: 735.0
+    y: 529.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/eye1"
@@ -100,8 +101,8 @@ nodes {
     y: 85.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/aid1"
@@ -116,12 +117,74 @@ nodes {
     y: 86.0
   }
   scale {
-    x: 0.5
-    y: 0.5
+    x: 0.7
+    y: 0.7
   }
   type: TYPE_BOX
   texture: "stare3/aid1"
   id: "aid2"
+  layer: "layer"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 303.0
+    y: 326.0
+  }
+  scale {
+    x: 0.7
+    y: 0.7
+  }
+  type: TYPE_BOX
+  texture: "stare3/eye1"
+  id: "eye4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 577.0
+    y: 396.0
+  }
+  scale {
+    x: 0.7
+    y: 0.7
+  }
+  type: TYPE_BOX
+  texture: "stare3/eye1"
+  id: "eye5"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 893.0
+    y: 185.0
+  }
+  scale {
+    x: 0.7
+    y: 0.7
+  }
+  type: TYPE_BOX
+  texture: "stare3/aid1"
+  id: "aid4"
+  layer: "layer"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 105.0
+    y: 165.0
+  }
+  scale {
+    x: 0.7
+    y: 0.7
+  }
+  type: TYPE_BOX
+  texture: "stare3/aid1"
+  id: "aid5"
   layer: "layer"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO

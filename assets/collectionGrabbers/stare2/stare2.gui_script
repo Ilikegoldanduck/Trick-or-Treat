@@ -12,7 +12,7 @@ local stareTable = {
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	local index = 1	
-	timer.delay(1, true, function()
+	timer.delay(.2, true, function()
 		index = index + 1
 		if index > 3 then
 			index = 1
