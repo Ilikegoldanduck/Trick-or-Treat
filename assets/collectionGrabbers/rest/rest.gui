@@ -1,4 +1,8 @@
 script: "/assets/collectionGrabbers/rest/rest.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
 textures {
   name: "rest"
   texture: "/assets/collectionGrabbers/rest/rest.atlas"
@@ -46,6 +50,42 @@ nodes {
   id: "man"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 652.0
+    y: 332.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "default"
+  id: "manText"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 257.0
+    y: 333.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "default"
+  id: "catText"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
