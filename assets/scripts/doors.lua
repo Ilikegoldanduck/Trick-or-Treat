@@ -1,6 +1,6 @@
 local doors = {}
 
-local number = 29
+local number = 34
 local candy = 0
 
 local doorTable = {}
@@ -36,7 +36,12 @@ local interactions = {
     {"Mwahahahaha!!! I'm the guy that appears when you get 25 candies!! >:3\nIt's time! I.. Challenge... You.... TO..... A...... hugging competition c:", {"hug", 0}, false},
     {"Oof, I'm hungry. Gimme that.", -25, false},
     {"Oh! I'm so sorry!! My neighbor, Mr. Biggs Backer (FICTIONAL CHARACTER), eats way too much!!\nHere! I'll make it up to you!", 30, false},
-    {"gkjhldfhcvjnewruioadlsjhjnfgkal", {"scrabble", 1}, false}
+    {"gkjhldfhcvjnewruioadlsjhjnfgkal", {"scrabble", 1}, false},
+    {"Oh! I'm so sorry!! That's my other neighbor, Mr. Scribble Scrabble (FICTIONAL CHARACTER). \nHe's... recovering from a scrabble tournament...", 1, false},
+    {".... . .-. . -.-.-- / - .- -.- . / - .... .. ... -.-.-- / -.-. -.-.-.", 1, false},
+    {"Oh! I'm so sorry!! That's my other other neighbor, Mr. Morse Codak (FICTIONAL CHARACTER). \nHe works in the navy!", 1, false},
+    {"Oh! I'm so sorry!! That's my other other other neighbor, Mr. Apollo G. (FICTIONAL CHARACTER). \nwait... that's me...", 0, false},
+    {"Oh! Tic Tac Toe... The most sophisticated of games.... \nI. will. win. this.", {"tictac", 1}, false}
 }
 
 function doors.getDoor()

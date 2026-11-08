@@ -109,6 +109,12 @@ embedded_instances {
   "  data: \"collection: \\\"/assets/minigames/scrabble.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"tictac\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/assets/minigames/tictac.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {
