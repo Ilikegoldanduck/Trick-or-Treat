@@ -2,8 +2,8 @@ local currCollect = ""
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	msg.post("#doors", "load")
-	currCollect = "doors"
+	msg.post("#start", "load")
+	currCollect = "start"
 end
 
 function on_message(self, message_id, message, sender)

@@ -1,0 +1,10 @@
+images {
+  image: "/assets/collectionGrabbers/start/start1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/start/start2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/start/start3.png"
+}
+extrude_borders: 2

@@ -54,7 +54,15 @@ function endGame()
 		end
 	end
 	timer.delay(5, false, function()
-		
+		gui.set_enabled(gui.get_node("ending"), true)
+		local index = 1
+		timer.delay(.2, true, function()
+			gui.play_flipbook(gui.get_node("ending"), "ending" .. tostring(index))
+			index = index + 1
+			if index > 3 then
+				index = 1
+			end
+		end)
 	end)
 end
 

@@ -1,0 +1,13 @@
+function init(self)
+	local index = 1
+	timer.delay(.2, true, function()
+		gui.play_flipbook(gui.get_node("start"), "start" .. tostring(index))
+		index = index + 1
+		if index > 3 then
+			index = 1
+		end
+	end)
+	timer.delay(3, false, function()
+		msg.post("main:/minigame collection#main", "trick", {"doors"})
+	end)
+end

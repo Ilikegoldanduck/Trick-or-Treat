@@ -112,6 +112,21 @@ nodes {
   size_mode: SIZE_MODE_AUTO
   visible: false
 }
+nodes {
+  position {
+    x: 480.0
+    y: 280.0
+  }
+  size {
+    x: 960.0
+    y: 480.0
+  }
+  type: TYPE_BOX
+  texture: "rest/ending1"
+  id: "ending"
+  inherit_alpha: true
+  enabled: false
+}
 layers {
   name: "layer"
 }

@@ -43,4 +43,13 @@ images {
 images {
   image: "/assets/collectionGrabbers/rest3/tile3.png"
 }
+images {
+  image: "/assets/collectionGrabbers/rest3/ending1.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest3/ending2.png"
+}
+images {
+  image: "/assets/collectionGrabbers/rest3/ending3.png"
+}
 extrude_borders: 2

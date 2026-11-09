@@ -1,0 +1,21 @@
+script: "/assets/collectionGrabbers/start/start.gui_script"
+textures {
+  name: "start"
+  texture: "/assets/collectionGrabbers/start/start.atlas"
+}
+nodes {
+  position {
+    x: 480.0
+    y: 320.0
+  }
+  size {
+    x: 960.0
+    y: 480.0
+  }
+  type: TYPE_BOX
+  texture: "start/start1"
+  id: "start"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
