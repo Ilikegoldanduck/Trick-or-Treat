@@ -3,15 +3,18 @@ local doors = require("assets.scripts.doors")
 local onDoor = false
 local inChat = false
 
+local updates = false
+
 function init(self)
 	timer.delay(.5, false, function()
 		msg.post(".", "acquire_input_focus")
 	end)
+	timer.delay(1, false, function()
+		updates = true
+	end)
 end
 
 function check()
-	gui.set_text(gui.get_node("candy"), tostring(doors.getCandy()))
-	gui.set_text(gui.get_node("doorThing"), tostring(doors.getDoor()))
 	if doors.getDoorAvail() then
 		gui.set_enabled(gui.get_node("forwardarrow"), false)
 		gui.set_enabled(gui.get_node("rightarrow"), true)
@@ -27,7 +30,11 @@ function check()
 end
 
 function update(self, dt)
-	check()
+	gui.set_text(gui.get_node("candy"), tostring(doors.getCandy()))
+	gui.set_text(gui.get_node("doorThing"), tostring(doors.getDoor()))
+	if updates then
+		check()
+	end
 end
 
 local function visual()
@@ -71,6 +78,9 @@ function on_input(self, action_id, action)
 			else
 				msg.post(".", "release_input_focus")
 				msg.post("go#doors", "trick", {treat})
+				for i, v in ipairs({"leftarrow", "rightarrow", "forwardarrow"}) do
+					gui.set_enabled(gui.get_node(v), false)
+				end
 			end
 			inChat = false
 			gui.set_enabled(gui.get_node("chat"), false)

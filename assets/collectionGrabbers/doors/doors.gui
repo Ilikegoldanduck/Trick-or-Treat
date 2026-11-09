@@ -24,6 +24,7 @@ nodes {
   texture: "arrows/turnArrow"
   id: "leftarrow"
   inherit_alpha: true
+  enabled: false
 }
 nodes {
   position {
@@ -39,6 +40,7 @@ nodes {
   id: "rightarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  enabled: false
 }
 nodes {
   position {
@@ -54,6 +56,7 @@ nodes {
   id: "forwardarrow"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  enabled: false
 }
 nodes {
   position {
