@@ -81,6 +81,7 @@ function on_input(self, action_id, action)
 				for i, v in ipairs({"leftarrow", "rightarrow", "forwardarrow"}) do
 					gui.set_enabled(gui.get_node(v), false)
 				end
+				gui.set_visible(gui.get_node("backwardarrow"), false)
 			end
 			inChat = false
 			gui.set_enabled(gui.get_node("chat"), false)
