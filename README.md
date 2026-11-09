@@ -15,6 +15,8 @@ You're going house to house, knocking on doors and getting candy. Hopefully noth
 - Most games have like info on what to do. Other are intuitive I guess..? Not too sure. Enjoy tho!
 - There wasn't really a plot for this game... I just did what I did best and started making a story up on my own
 - The visuals are intentional. It isn't programmer art.
+- There is sfx for most scenes
+  - I may have forgotten some
 - Hopefully no bugs..?
 
 ---
