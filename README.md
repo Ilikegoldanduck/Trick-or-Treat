@@ -1,13 +1,12 @@
-# Welcome to Defold
+# Trick or Treat
 
-This project was created from the "empty" project template.
+You're going house to house, knocking on doors and getting candy. Hopefully nothing bad happens right?
 
-The settings in ["game.project"](defold://open?path=/game.project) are all the default. A bootstrap empty ["main.collection"](defold://open?path=/main/main.collection) is included.
+How to play:
+- It's just a point and click
+- Go door to door and enjoy the story that comes from this fun little game on trick or treating.
 
-Check out [the documentation pages](https://defold.com/learn) for examples, tutorials, manuals and API docs.
-
-If you run into trouble, help is available in [our forum](https://forum.defold.com).
-
-Happy Defolding!
+Extra info on the games:
+- Most games have like info on what to do. Other are intuitive I guess..? Not too sure. Enjoy tho!
 
 ---
