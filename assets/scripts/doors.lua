@@ -1,6 +1,6 @@
 local doors = {}
 
-local number = 1
+local number = 39
 local candy = 0
 
 local doorTable = {}

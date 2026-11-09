@@ -37,14 +37,19 @@ local catText = {
 	"miaow"
 }
 
+local exited = false
+
 function on_input(self, action_id, action)
-	if gui.pick_node(gui.get_node("candy"), action.x, action.y) then
+	if not exited and gui.pick_node(gui.get_node("candy"), action.x, action.y) then
 		if action_id == hash("touch") and action.pressed then
-			gui.set_enabled(gui.get_node("candy"), false)
+			exited = true
 			msg.post(".", "release_input_focus")
+			gui.set_enabled(gui.get_node("candy"), false)
 			msg.post("main:/soundHandler#soundHandler", "soundStop", {"fire"})
-			msg.post("main:/soundHandler#soundHandler", "sound", {"candy"})
-			msg.post("main:/minigame collection#main", "trick", {"doors"})
+			msg.post("main:/soundHandler#soundHandler", "sound", {"candy"})		
+			timer.delay(1, false, function()
+				msg.post("main:/minigame collection#main", "trick", {"doors"})
+			end)
 		else
 			gui.set(gui.get_node("candy"), "scale", vmath.vector3(1.2, 1.2, 1))
 		end
